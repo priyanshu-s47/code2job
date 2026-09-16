@@ -1,0 +1,382 @@
+
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Java Spring Boot Code Sanitizer | Code2Job
+    </title>
+
+    <meta name="description"
+          content="Review Java and Spring Boot code for security and performance issues, then turn genuine implementation details into resume-ready impact statements.">
+
+    <meta name="keywords"
+          content="Java code sanitizer, Spring Boot code review, Java security review, Spring Boot security, Java performance review, developer resume bullets">
+
+    <meta name="robots"
+          content="index, follow">
+
+    <link rel="canonical"
+          href="https://code2job.com/sanitizer">
+
+    <meta property="og:title"
+          content="Java Spring Boot Code Sanitizer | Code2Job">
+
+    <meta property="og:description"
+          content="Paste Java or Spring Boot code to identify security and performance concerns and generate resume-ready impact statements.">
+
+    <meta property="og:type"
+          content="website">
+
+    <link rel="stylesheet"
+          th:href="@{/css/app.css}">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+
+<body>
+
+<div class="c2j-shell">
+
+
+    <!-- Navigation -->
+
+    <header class="c2j-nav">
+
+        <div class="c2j-container min-h-[74px] flex items-center justify-between">
+
+            <a href="/"
+               class="c2j-logo">
+
+                Code<span>2</span>Job
+
+            </a>
+
+
+            <div class="flex items-center gap-6">
+
+                <span class="hidden sm:block text-sm font-semibold text-gray-500">
+                    Java / Spring Boot Sanitizer
+                </span>
+
+                <a href="/"
+                   class="c2j-nav-link">
+                    Home
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <main class="c2j-container py-14">
+
+
+        <!-- Heading -->
+
+        <section class="max-w-3xl">
+
+            <div class="c2j-eyebrow">
+                Developer Tool
+            </div>
+
+            <h1 class="mt-5 text-4xl md:text-5xl font-extrabold leading-tight">
+
+                Paste the code.
+                <span class="text-[#c96b3b]">
+                    Find the problems.
+                </span>
+
+            </h1>
+
+            <p class="mt-5 text-lg text-gray-500 leading-8">
+
+                Review Java and Spring Boot code for practical
+                security and performance concerns, then extract
+                genuine implementation details that can become
+                stronger resume statements.
+
+            </p>
+
+        </section>
+
+
+        <div class="mt-8 c2j-trust-strip">
+
+            <span class="c2j-trust-item">
+                <span class="c2j-status-dot"></span>
+                Java focused
+            </span>
+
+            <span class="c2j-trust-item">
+                Spring Boot focused
+            </span>
+
+            <span class="c2j-trust-item">
+                Security review
+            </span>
+
+            <span class="c2j-trust-item">
+                Performance review
+            </span>
+
+            <span class="c2j-trust-item">
+                Resume impact statements
+            </span>
+
+        </div>
+
+
+
+        <!-- Workspace -->
+
+        <section class="mt-10">
+
+            <div class="c2j-card c2j-card-shadow p-6 md:p-8">
+
+                <div class="flex items-start justify-between">
+
+                    <div>
+
+                        <span class="c2j-feature-number">
+                            CODE INPUT
+                        </span>
+
+                        <h2 class="mt-2 text-2xl font-bold">
+                            Java / Spring Boot source code
+                        </h2>
+
+                    </div>
+
+                    <span class="text-xs font-bold text-gray-400">
+                        Step 01
+                    </span>
+
+                </div>
+
+
+                <div class="mt-7">
+
+                    <label for="codeInput"
+                           class="c2j-label">
+
+                        Paste your code
+
+                    </label>
+
+                    <textarea id="codeInput"
+                              class="c2j-input font-mono text-sm"
+                              rows="20"
+                              spellcheck="false"
+                              placeholder="@RestController
+@RequestMapping(&quot;/users&quot;)
+public class UserController {
+
+    @GetMapping
+    public List&lt;User&gt; getUsers() {
+        return userService.findAll();
+    }
+}"></textarea>
+
+                </div>
+
+
+                <div class="mt-7 grid md:grid-cols-2 gap-5">
+
+
+                    <div>
+
+                        <label for="codeContext"
+                               class="c2j-label">
+
+                            What does this code do?
+                            <span class="font-normal text-gray-400">
+                                Optional
+                            </span>
+
+                        </label>
+
+                        <textarea id="codeContext"
+                                  class="c2j-input"
+                                  rows="5"
+                                  placeholder="Example: This controller exposes user data for an internal application."></textarea>
+
+                    </div>
+
+
+                    <div>
+
+                        <label for="developerGoal"
+                               class="c2j-label">
+
+                            What are you trying to improve?
+                            <span class="font-normal text-gray-400">
+                                Optional
+                            </span>
+
+                        </label>
+
+                        <textarea id="developerGoal"
+                                  class="c2j-input"
+                                  rows="5"
+                                  placeholder="Example: I want the endpoint to be more secure and efficient."></textarea>
+
+                    </div>
+
+                </div>
+
+
+                <div class="mt-8 pt-6 border-t border-[#dfddd6]">
+
+                    <button id="sanitizeCode"
+                            type="button"
+                            class="c2j-primary-btn">
+
+                        Review & Sanitize Code
+
+                        <span class="ml-2">
+                            →
+                        </span>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- Output -->
+
+        <section id="sanitizerOutput"
+                 class="mt-8 hidden">
+
+            <div class="grid lg:grid-cols-2 gap-6">
+
+
+                <!-- Security -->
+
+                <div class="c2j-card p-6">
+
+                    <span class="c2j-feature-number">
+                        01 / SECURITY
+                    </span>
+
+                    <h2 class="mt-2 text-2xl font-bold">
+                        Code Sanitization Tips
+                    </h2>
+
+                    <div id="securityResults"
+                         class="mt-6 space-y-4">
+                    </div>
+
+                </div>
+
+
+                <!-- Performance -->
+
+                <div class="c2j-card p-6">
+
+                    <span class="c2j-feature-number">
+                        02 / PERFORMANCE
+                    </span>
+
+                    <h2 class="mt-2 text-2xl font-bold">
+                        Performance Considerations
+                    </h2>
+
+                    <div id="performanceResults"
+                         class="mt-6 space-y-4">
+                    </div>
+
+                </div>
+
+
+                <!-- Resume -->
+
+                <div class="c2j-card p-6 lg:col-span-2">
+
+                    <span class="c2j-feature-number">
+                        03 / RESUME
+                    </span>
+
+                    <h2 class="mt-2 text-2xl font-bold">
+                        Resume-Ready Impact Statements
+                    </h2>
+
+                    <p class="mt-2 text-sm text-gray-500">
+                        These should describe only capabilities and work
+                        that are genuinely supported by the submitted code.
+                    </p>
+
+
+                    <div id="resumeStatements"
+                         class="mt-6 grid md:grid-cols-3 gap-4">
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="mt-6 border border-[#dfddd6] rounded-lg p-5 bg-[#fbfaf7]">
+
+                <p class="text-sm text-gray-500 leading-6">
+
+                    AI-generated technical suggestions should be reviewed
+                    by the developer before being applied to production code.
+                    Code2Job's resume statements should remain grounded in
+                    the submitted implementation.
+
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- Footer -->
+
+    <footer class="c2j-footer">
+
+        <div class="c2j-container py-8 flex justify-between gap-5">
+
+            <p class="text-sm text-gray-500">
+                Code2Job — Java and Spring Boot career tooling.
+            </p>
+
+            <a href="/"
+               class="text-sm font-semibold text-gray-600">
+                Home
+            </a>
+
+        </div>
+
+    </footer>
+
+</div>
+
+
+<script th:src="@{/js/app.js}"></script>
+
+</body>
+
+</html>
+

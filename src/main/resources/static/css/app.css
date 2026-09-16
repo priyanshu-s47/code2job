@@ -1,0 +1,726 @@
+
+/* =========================================================
+   Code2Job MVP Design System
+   Clean, trustworthy and product-focused visual language
+   ========================================================= */
+
+:root {
+    --c2j-ink: #17202a;
+    --c2j-ink-soft: #34404b;
+    --c2j-muted: #68737e;
+
+    --c2j-paper: #f6f5f1;
+    --c2j-white: #ffffff;
+
+    --c2j-line: #dfddd6;
+    --c2j-line-dark: #cbc8bf;
+
+    --c2j-accent: #c96b3b;
+    --c2j-accent-dark: #a94f29;
+    --c2j-accent-soft: #f4e4da;
+
+    --c2j-success: #2f7d57;
+    --c2j-danger: #a63d32;
+
+    --c2j-shadow: 0 14px 40px rgba(23, 32, 42, 0.07);
+
+    --c2j-radius: 10px;
+}
+
+
+/* =========================================================
+   Base
+   ========================================================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--c2j-paper);
+    color: var(--c2j-ink);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    color: inherit;
+}
+
+::selection {
+    background: var(--c2j-accent-soft);
+    color: var(--c2j-ink);
+}
+
+
+/* =========================================================
+   Typography
+   ========================================================= */
+
+h1,
+h2,
+h3,
+h4 {
+    margin-top: 0;
+    color: var(--c2j-ink);
+    letter-spacing: -0.025em;
+}
+
+.c2j-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+
+    color: var(--c2j-accent-dark);
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+}
+
+.c2j-eyebrow::before {
+    content: "";
+
+    width: 24px;
+    height: 1px;
+
+    background: var(--c2j-accent);
+}
+
+
+/* =========================================================
+   Layout
+   ========================================================= */
+
+.c2j-shell {
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at 85% 5%,
+            rgba(201, 107, 59, 0.055),
+            transparent 27%
+        ),
+        var(--c2j-paper);
+}
+
+.c2j-container {
+    width: min(1180px, calc(100% - 40px));
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   Navigation
+   ========================================================= */
+
+.c2j-nav {
+    min-height: 74px;
+
+    border-bottom: 1px solid var(--c2j-line);
+
+    background: rgba(246, 245, 241, 0.96);
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.c2j-logo {
+    color: var(--c2j-ink);
+
+    text-decoration: none;
+
+    font-size: 21px;
+    font-weight: 800;
+    letter-spacing: -0.045em;
+}
+
+.c2j-logo span {
+    color: var(--c2j-accent);
+}
+
+.c2j-nav-link {
+    color: #59636d;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    transition: color 0.2s ease;
+}
+
+.c2j-nav-link:hover {
+    color: var(--c2j-ink);
+}
+
+
+/* =========================================================
+   Buttons
+   ========================================================= */
+
+.c2j-primary-btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 46px;
+
+    padding: 0 20px;
+
+    border: 1px solid var(--c2j-ink);
+    border-radius: 7px;
+
+    background: var(--c2j-ink);
+    color: var(--c2j-white);
+
+    font-size: 14px;
+    font-weight: 800;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.c2j-primary-btn:hover {
+    background: #27323d;
+
+    transform: translateY(-1px);
+
+    box-shadow: 0 7px 20px rgba(23, 32, 42, 0.12);
+}
+
+.c2j-secondary-btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 46px;
+
+    padding: 0 20px;
+
+    border: 1px solid var(--c2j-line-dark);
+    border-radius: 7px;
+
+    background: var(--c2j-white);
+    color: var(--c2j-ink);
+
+    font-size: 14px;
+    font-weight: 800;
+
+    text-decoration: none;
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease;
+}
+
+.c2j-secondary-btn:hover {
+    border-color: #aaa69d;
+    background: #fbfaf7;
+}
+
+
+/* =========================================================
+   Cards
+   ========================================================= */
+
+.c2j-card {
+    border: 1px solid var(--c2j-line);
+    border-radius: var(--c2j-radius);
+
+    background: var(--c2j-white);
+}
+
+.c2j-card-shadow {
+    box-shadow: var(--c2j-shadow);
+}
+
+.c2j-feature-card {
+    min-height: 300px;
+
+    padding: 28px;
+
+    border: 1px solid var(--c2j-line);
+    border-radius: var(--c2j-radius);
+
+    background: var(--c2j-white);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.c2j-feature-card:hover {
+    transform: translateY(-4px);
+
+    border-color: #cac7bf;
+
+    box-shadow: var(--c2j-shadow);
+}
+
+
+/* =========================================================
+   Form Elements
+   ========================================================= */
+
+.c2j-label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #303943;
+
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.c2j-input {
+    width: 100%;
+
+    padding: 13px 14px;
+
+    border: 1px solid #d7d5ce;
+    border-radius: 7px;
+
+    background: var(--c2j-white);
+    color: var(--c2j-ink);
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.c2j-input::placeholder {
+    color: #a0a5a9;
+}
+
+.c2j-input:focus {
+    border-color: #8e766a;
+
+    box-shadow:
+        0 0 0 3px rgba(201, 107, 59, 0.10);
+}
+
+textarea.c2j-input {
+    resize: vertical;
+    min-height: 180px;
+}
+
+
+/* =========================================================
+   Trust / Status Elements
+   ========================================================= */
+
+.c2j-trust-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.c2j-trust-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 8px 11px;
+
+    border: 1px solid var(--c2j-line);
+    border-radius: 6px;
+
+    background: rgba(255, 255, 255, 0.65);
+
+    color: #5c6670;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.c2j-status-dot {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: var(--c2j-success);
+}
+
+
+/* =========================================================
+   Product Preview
+   ========================================================= */
+
+.c2j-product-window {
+    overflow: hidden;
+
+    border: 1px solid #d9d6ce;
+    border-radius: 12px;
+
+    background: #fff;
+
+    box-shadow:
+        0 25px 60px rgba(23, 32, 42, 0.10);
+}
+
+.c2j-window-header {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    padding: 13px 16px;
+
+    border-bottom: 1px solid var(--c2j-line);
+
+    background: #faf9f6;
+}
+
+.c2j-window-dot {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #c7c4bc;
+}
+
+.c2j-window-body {
+    padding: 24px;
+}
+
+
+/* =========================================================
+   Feature Number
+   ========================================================= */
+
+.c2j-feature-number {
+    color: #a7a39a;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    letter-spacing: 0.08em;
+}
+
+
+/* =========================================================
+   Accent Blocks
+   ========================================================= */
+
+.c2j-accent-line {
+    width: 42px;
+    height: 3px;
+
+    background: var(--c2j-accent);
+}
+
+
+/* =========================================================
+   Code Display
+   ========================================================= */
+
+.c2j-code-box {
+    overflow-x: auto;
+
+    padding: 20px;
+
+    border: 1px solid #d8d5cd;
+    border-radius: 8px;
+
+    background: #1c252d;
+    color: #e8edf0;
+
+    font-family:
+        "SFMono-Regular",
+        Consolas,
+        "Liberation Mono",
+        monospace;
+
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   Score Display
+   ========================================================= */
+
+.c2j-score {
+    width: 150px;
+    height: 150px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 9px solid #e8e5de;
+    border-top-color: var(--c2j-accent);
+
+    border-radius: 50%;
+
+    font-size: 32px;
+    font-weight: 800;
+}
+
+/* =========================================================
+   SINGLE PAGE RESUME BUILDER
+   ========================================================= */
+
+.resume-step {
+    display: block;
+}
+
+.resume-step.hidden {
+    display: block !important;
+}
+
+.resume-section-highlight {
+    animation: resumeSectionHighlight 1s ease;
+}
+
+@keyframes resumeSectionHighlight {
+
+    0% {
+        box-shadow: 0 0 0 0 rgba(201, 107, 59, 0.20);
+    }
+
+    50% {
+        box-shadow: 0 0 0 5px rgba(201, 107, 59, 0.08);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(201, 107, 59, 0);
+    }
+}
+
+
+/* =========================================================
+   VALIDATION
+   ========================================================= */
+
+.c2j-invalid-input {
+    border-color: #b85c3a !important;
+    box-shadow: 0 0 0 3px rgba(184, 92, 58, 0.10) !important;
+}
+
+.c2j-input::placeholder {
+    color: #a39e95;
+}
+
+
+/* =========================================================
+   FORM MESSAGE
+   ========================================================= */
+
+.c2j-form-message {
+    margin-bottom: 20px;
+    padding: 13px 16px;
+    border: 1px solid var(--c2j-line);
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.c2j-form-message.success {
+    background: #f3f7f2;
+    border-color: #cbd9c7;
+    color: #385437;
+}
+
+.c2j-form-message.error {
+    background: #fbf3ef;
+    border-color: #e4c5b7;
+    color: #8a422b;
+}
+
+
+/* =========================================================
+   ATS PAGE
+   ========================================================= */
+
+.ats-upload-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.ats-upload-box {
+    border: 1.5px dashed #cfcac0;
+    border-radius: 10px;
+    background: #fbfaf7;
+    padding: 30px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.ats-upload-box:hover {
+    border-color: var(--c2j-accent);
+    background: #fffdf9;
+    transform: translateY(-2px);
+}
+
+.ats-upload-box.uploaded {
+    border-style: solid;
+    border-color: #9baf91;
+    background: #f5f8f3;
+}
+
+.ats-upload-icon {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.ats-upload-title {
+    margin: 0 0 6px;
+    font-family: "Manrope", sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.ats-upload-description {
+    margin: 0;
+    color: var(--c2j-muted);
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.ats-file-name {
+    display: block;
+    margin-top: 12px;
+    color: var(--c2j-accent-dark);
+    font-size: 13px;
+    font-weight: 700;
+    word-break: break-word;
+}
+
+.ats-source-divider {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 24px 0;
+    color: #8b867e;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.ats-source-divider::before,
+.ats-source-divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--c2j-line);
+}
+
+.ats-message {
+    margin-top: 18px;
+    padding: 13px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.ats-message.error {
+    background: #fbf3ef;
+    border: 1px solid #e4c5b7;
+    color: #8a422b;
+}
+
+.ats-result {
+    margin-top: 32px;
+}
+
+@media (max-width: 768px) {
+
+    .ats-upload-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================================================
+   Footer
+   ========================================================= */
+
+.c2j-footer {
+    border-top: 1px solid var(--c2j-line);
+}
+
+.c2j-invalid-input {
+    border-color: #b85c3a !important;
+    box-shadow: 0 0 0 3px rgba(184, 92, 58, 0.10) !important;
+}
+
+.c2j-input::placeholder {
+    color: #a39e95;
+}
+
+.resume-step {
+    animation: resumeStepIn 0.25s ease;
+}
+
+@keyframes resumeStepIn {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================================================
+   Responsive
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .c2j-container {
+        width: min(100% - 28px, 1180px);
+    }
+
+    .c2j-nav {
+        position: relative;
+    }
+
+    .c2j-feature-card {
+        min-height: auto;
+    }
+
+    .c2j-product-preview {
+        margin-top: 35px;
+    }
+
+}
+

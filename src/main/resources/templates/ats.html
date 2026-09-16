@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>ATS Resume Match Checker | Code2Job</title>
+
+    <meta name="description"
+          content="Check how well your resume matches a target job description using Code2Job ATS Match Analyzer. Upload your resume and job description or paste the job description text.">
+
+    <meta name="robots"
+          content="index, follow">
+
+    <link rel="stylesheet"
+          th:href="@{/css/app.css}">
+
+</head>
+
+
+<body data-page="ats">
+
+<div class="c2j-shell">
+
+    <!-- NAVIGATION -->
+
+    <nav class="c2j-nav">
+
+        <div class="c2j-container"
+             style="height:100%; display:flex; align-items:center; justify-content:space-between;">
+
+            <a th:href="@{/}"
+               class="c2j-logo">
+                Code<span>2</span>Job
+            </a>
+
+            <div style="display:flex; gap:24px; align-items:center;">
+
+                <a th:href="@{/}"
+                   class="c2j-nav-link">
+                    Home
+                </a>
+
+                <a th:href="@{/resume}"
+                   class="c2j-nav-link">
+                    Resume Builder
+                </a>
+
+                <a th:href="@{/sanitizer}"
+                   class="c2j-nav-link">
+                    Code Sanitizer
+                </a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- MAIN -->
+
+    <main class="c2j-container"
+          style="padding:70px 0 90px;">
+
+        <!-- HERO -->
+
+        <section style="max-width:760px; margin-bottom:42px;">
+
+            <span class="c2j-eyebrow">
+                ATS Match Analyzer
+            </span>
+
+            <h1 style="font-size:clamp(36px,5vw,58px); margin:18px 0 14px;">
+                See how closely your resume matches a job.
+            </h1>
+
+            <p class="c2j-muted"
+               style="font-size:17px; line-height:1.7; max-width:680px;">
+
+                Upload your resume, then provide the job description
+                as text or PDF. Code2Job analyzes the information and
+                highlights matching skills, missing keywords and
+                important gaps.
+
+            </p>
+
+        </section>
+
+
+        <!-- FORM -->
+
+        <section class="c2j-card"
+                 style="padding:28px;">
+
+            <div style="margin-bottom:26px;">
+
+                <h2 style="margin:0 0 7px;">
+                    1. Your Resume
+                </h2>
+
+                <p class="c2j-muted"
+                   style="margin:0; font-size:14px;">
+
+                    Upload the resume you want to compare.
+
+                </p>
+
+            </div>
+
+
+            <div id="resumeUploadArea"
+                 class="ats-upload-box">
+
+                <input
+                        type="file"
+                        id="resumePdf"
+                        accept="application/pdf"
+                        hidden>
+
+                <div class="ats-upload-icon">
+                    PDF
+                </div>
+
+                <p class="ats-upload-title">
+                    Upload Resume PDF
+                </p>
+
+                <p class="ats-upload-description">
+                    Click here to choose your resume.
+                    Maximum file size: 5 MB.
+                </p>
+
+                <span id="resumeFileName"
+                      class="ats-file-name">
+                    No file selected
+                </span>
+
+            </div>
+
+
+            <div style="margin-top:42px; margin-bottom:26px;">
+
+                <h2 style="margin:0 0 7px;">
+                    2. Job Description
+                </h2>
+
+                <p class="c2j-muted"
+                   style="margin:0; font-size:14px;">
+
+                    Use either a PDF or paste the job description.
+
+                </p>
+
+            </div>
+
+
+            <div class="ats-upload-grid">
+
+                <!-- JD PDF -->
+
+                <div id="jdUploadArea"
+                     class="ats-upload-box">
+
+                    <input
+                            type="file"
+                            id="jdPdf"
+                            accept="application/pdf"
+                            hidden>
+
+                    <div class="ats-upload-icon">
+                        PDF
+                    </div>
+
+                    <p class="ats-upload-title">
+                        Upload JD PDF
+                    </p>
+
+                    <p class="ats-upload-description">
+                        Upload the job description as a PDF.
+                    </p>
+
+                    <span id="jdFileName"
+                          class="ats-file-name">
+                        No file selected
+                    </span>
+
+                </div>
+
+
+                <!-- PASTE TEXT -->
+
+                <div>
+
+                    <label for="jobDescription"
+                           class="c2j-label">
+
+                        Or paste Job Description
+
+                    </label>
+
+                    <textarea
+                            id="jobDescription"
+                            class="c2j-input"
+                            rows="9"
+                            placeholder="Example:
+We are looking for a Java Developer with Spring Boot, REST API and SQL experience.
+
+You can paste the complete job description here."></textarea>
+
+                </div>
+
+            </div>
+
+
+            <div id="atsMessage"
+                 class="ats-message hidden">
+            </div>
+
+
+            <div style="margin-top:28px; display:flex; justify-content:flex-end;">
+
+                <button
+                        type="button"
+                        id="analyzeAts"
+                        class="c2j-primary-btn">
+
+                    Analyze ATS Match
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- RESULT -->
+
+        <section id="atsResult"
+                 class="c2j-card ats-result hidden"
+                 style="padding:30px;">
+
+            <span class="c2j-eyebrow">
+                Analysis Result
+            </span>
+
+            <div style="margin-top:18px;">
+
+                <h2 style="margin-bottom:8px;">
+                    Your ATS Match
+                </h2>
+
+                <div id="atsScore"
+                     style="font-family:Manrope,sans-serif; font-size:56px; font-weight:800;">
+
+                    --
+
+                </div>
+
+                <p class="c2j-muted">
+                    Your detailed match analysis will appear here.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script th:src="@{/js/app.js}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,722 @@
+
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Code2Job | AI Resume Builder, Code Sanitizer & ATS Match
+    </title>
+
+    <meta name="description"
+          content="Code2Job helps turn raw career experience into professional resume content, review Java Spring Boot code, and compare resumes with job descriptions using ATS-focused matching.">
+
+    <meta name="keywords"
+          content="AI resume builder, resume generator, ATS resume checker, ATS match score, Java code sanitizer, Spring Boot code review, resume bullet generator, professional resume">
+
+    <meta name="author"
+          content="Code2Job">
+
+    <meta name="robots"
+          content="index, follow">
+
+    <link rel="canonical"
+          href="https://code2job.com/">
+
+    <meta property="og:title"
+          content="Code2Job | Resume, Code & ATS Career Tools">
+
+    <meta property="og:description"
+          content="Turn raw experience into professional resume content, review Java Spring Boot code, and check resume-to-job alignment.">
+
+    <meta property="og:type"
+          content="website">
+
+    <meta property="og:url"
+          content="https://code2job.com/">
+
+    <link rel="stylesheet"
+          th:href="@{/css/app.css}">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+    <!-- Structured data helps search engines understand the website. -->
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebApplication",
+            "name": "Code2Job",
+            "url": "https://code2job.com/",
+            "applicationCategory": "BusinessApplication",
+            "description": "Career tools for resume generation, Java Spring Boot code review and ATS job description matching.",
+            "operatingSystem": "Web"
+        }
+    </script>
+
+</head>
+
+
+<body>
+
+<div class="c2j-shell">
+
+
+    <!-- =====================================================
+         Navigation
+    ====================================================== -->
+
+    <header class="c2j-nav">
+
+        <div class="c2j-container min-h-[74px] flex items-center justify-between gap-8">
+
+            <a href="/"
+               class="c2j-logo"
+               aria-label="Code2Job home">
+
+                Code<span>2</span>Job
+
+            </a>
+
+
+            <nav class="hidden md:flex items-center gap-7"
+                 aria-label="Main navigation">
+
+                <a href="#features"
+                   class="c2j-nav-link">
+
+                    Features
+
+                </a>
+
+                <a href="#how-it-works"
+                   class="c2j-nav-link">
+
+                    How It Works
+
+                </a>
+
+                <a href="#why-code2job"
+                   class="c2j-nav-link">
+
+                    Why Code2Job
+
+                </a>
+
+            </nav>
+
+
+            <a href="/resume"
+               class="c2j-primary-btn">
+
+                Build Resume
+
+            </a>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         Hero
+    ====================================================== -->
+
+    <main>
+
+        <section class="c2j-container pt-16 md:pt-24 pb-20">
+
+            <div class="grid lg:grid-cols-2 gap-14 items-center">
+
+
+                <!-- Hero Content -->
+
+                <div>
+
+                    <div class="c2j-eyebrow">
+                        Career tools that do useful work
+                    </div>
+
+
+                    <h1 class="mt-6 text-4xl md:text-6xl font-extrabold leading-[1.05]">
+
+                        Your experience is valuable.
+
+                        <span class="text-[#c96b3b]">
+                            Make it readable.
+                        </span>
+
+                    </h1>
+
+
+                    <p class="mt-7 text-lg text-[#68737e] leading-8 max-w-xl">
+
+                        Code2Job turns raw career information into
+                        professional resume content, reviews Java
+                        Spring Boot code, and checks how closely a
+                        resume matches a target job description.
+
+                    </p>
+
+
+                    <div class="mt-8 flex flex-col sm:flex-row gap-3">
+
+                        <a href="/resume"
+                           class="c2j-primary-btn">
+
+                            Create Professional Resume
+
+                            <span class="ml-2">
+                                →
+                            </span>
+
+                        </a>
+
+
+                        <a href="/sanitizer"
+                           class="c2j-secondary-btn">
+
+                            Review Java Code
+
+                        </a>
+
+                    </div>
+
+
+                    <!-- Trust Signals -->
+
+                    <div class="mt-8 c2j-trust-strip">
+
+                        <span class="c2j-trust-item">
+
+                            <span class="c2j-status-dot"></span>
+
+                            Any career domain
+
+                        </span>
+
+
+                        <span class="c2j-trust-item">
+
+                            ATS-focused
+
+                        </span>
+
+
+                        <span class="c2j-trust-item">
+
+                            Java / Spring Boot tools
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Product Preview -->
+
+                <div class="c2j-product-preview">
+
+                    <div class="c2j-product-window">
+
+                        <div class="c2j-window-header">
+
+                            <span class="c2j-window-dot"></span>
+                            <span class="c2j-window-dot"></span>
+                            <span class="c2j-window-dot"></span>
+
+                            <span class="ml-3 text-xs font-semibold text-gray-400">
+                                Code2Job
+                            </span>
+
+                        </div>
+
+
+                        <div class="c2j-window-body">
+
+                            <div class="flex items-center justify-between">
+
+                                <div>
+
+                                    <p class="text-xs uppercase tracking-wider text-gray-400 font-bold">
+                                        Career workspace
+                                    </p>
+
+                                    <h2 class="mt-2 text-xl font-bold">
+                                        Choose what you need.
+                                    </h2>
+
+                                </div>
+
+                                <div class="c2j-accent-line"></div>
+
+                            </div>
+
+
+                            <div class="mt-7 grid gap-3">
+
+
+                                <!-- Resume -->
+
+                                <a href="/resume"
+                                   class="block border border-[#dfddd6] rounded-lg p-4 hover:border-[#c96b3b] transition">
+
+                                    <div class="flex items-center justify-between">
+
+                                        <div>
+
+                                            <p class="text-xs font-bold text-[#c96b3b]">
+                                                01
+                                            </p>
+
+                                            <p class="mt-1 font-bold">
+                                                AI Resume Generator
+                                            </p>
+
+                                        </div>
+
+                                        <span>
+                                            →
+                                        </span>
+
+                                    </div>
+
+                                    <p class="mt-2 text-sm text-gray-500">
+                                        Raw experience → professional resume content
+                                    </p>
+
+                                </a>
+
+
+                                <!-- Sanitizer -->
+
+                                <a href="/sanitizer"
+                                   class="block border border-[#dfddd6] rounded-lg p-4 hover:border-[#c96b3b] transition">
+
+                                    <div class="flex items-center justify-between">
+
+                                        <div>
+
+                                            <p class="text-xs font-bold text-[#c96b3b]">
+                                                02
+                                            </p>
+
+                                            <p class="mt-1 font-bold">
+                                                Java Code Sanitizer
+                                            </p>
+
+                                        </div>
+
+                                        <span>
+                                            →
+                                        </span>
+
+                                    </div>
+
+                                    <p class="mt-2 text-sm text-gray-500">
+                                        Code → review points + resume impact statements
+                                    </p>
+
+                                </a>
+
+
+                                <!-- ATS -->
+
+                                <a href="/ats"
+                                   class="block border border-[#dfddd6] rounded-lg p-4 hover:border-[#c96b3b] transition">
+
+                                    <div class="flex items-center justify-between">
+
+                                        <div>
+
+                                            <p class="text-xs font-bold text-[#c96b3b]">
+                                                03
+                                            </p>
+
+                                            <p class="mt-1 font-bold">
+                                                ATS Match Predictor
+                                            </p>
+
+                                        </div>
+
+                                        <span>
+                                            →
+                                        </span>
+
+                                    </div>
+
+                                    <p class="mt-2 text-sm text-gray-500">
+                                        Resume + JD → match score + missing keywords
+                                    </p>
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             Core MVP Features
+        ====================================================== -->
+
+        <section id="features"
+                 class="c2j-container py-20">
+
+            <div class="max-w-2xl">
+
+                <div class="c2j-eyebrow">
+                    The Code2Job MVP
+                </div>
+
+                <h2 class="mt-5 text-3xl md:text-4xl font-extrabold">
+                    Three focused tools.
+                    One career workspace.
+                </h2>
+
+                <p class="mt-5 text-gray-500 leading-7">
+                    Code2Job is intentionally focused on practical
+                    career problems instead of filling the product
+                    with dozens of unrelated AI features.
+                </p>
+
+            </div>
+
+
+            <div class="mt-10 grid md:grid-cols-3 gap-5">
+
+
+                <!-- Feature 1 -->
+
+                <a href="/resume"
+                   class="c2j-feature-card block no-underline">
+
+                    <span class="c2j-feature-number">
+                        01 / RESUME
+                    </span>
+
+                    <h3 class="mt-7 text-2xl font-bold">
+                        Raw Experience → Professional Resume
+                    </h3>
+
+                    <p class="mt-4 text-gray-500 leading-7">
+                        Write naturally. Explain what you actually did,
+                        even if the wording is broken or conversational.
+                        The AI restructures the information into
+                        professional resume language.
+                    </p>
+
+                    <div class="mt-8 pt-5 border-t border-[#e4e2dc]">
+
+                        <p class="text-sm font-bold">
+                            Built for any domain
+                        </p>
+
+                        <p class="mt-1 text-sm text-gray-500">
+                            IT, business, teaching, pharma,
+                            manufacturing, freshers and more.
+                        </p>
+
+                    </div>
+
+                </a>
+
+
+                <!-- Feature 2 -->
+
+                <a href="/sanitizer"
+                   class="c2j-feature-card block no-underline">
+
+                    <span class="c2j-feature-number">
+                        02 / CODE
+                    </span>
+
+                    <h3 class="mt-7 text-2xl font-bold">
+                        Java & Spring Boot Code Sanitizer
+                    </h3>
+
+                    <p class="mt-4 text-gray-500 leading-7">
+                        Paste a controller, service or other Java code.
+                        Get focused security and performance review
+                        points plus resume-ready impact statements.
+                    </p>
+
+                    <div class="mt-8 pt-5 border-t border-[#e4e2dc]">
+
+                        <p class="text-sm font-bold">
+                            Developer-focused
+                        </p>
+
+                        <p class="mt-1 text-sm text-gray-500">
+                            Designed around Spring Boot and Java
+                            development workflows.
+                        </p>
+
+                    </div>
+
+                </a>
+
+
+                <!-- Feature 3 -->
+
+                <a href="/ats"
+                   class="c2j-feature-card block no-underline">
+
+                    <span class="c2j-feature-number">
+                        03 / ATS
+                    </span>
+
+                    <h3 class="mt-7 text-2xl font-bold">
+                        Essential ATS Match Predictor
+                    </h3>
+
+                    <p class="mt-4 text-gray-500 leading-7">
+                        Compare a resume with a specific job description
+                        and identify alignment gaps before applying.
+                    </p>
+
+                    <div class="mt-8 pt-5 border-t border-[#e4e2dc]">
+
+                        <p class="text-sm font-bold">
+                            Clear output
+                        </p>
+
+                        <p class="mt-1 text-sm text-gray-500">
+                            Match score from 0–100 and critical
+                            missing keywords or skills.
+                        </p>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             How It Works
+        ====================================================== -->
+
+        <section id="how-it-works"
+                 class="border-y border-[#dfddd6] bg-[#fbfaf7]">
+
+            <div class="c2j-container py-20">
+
+                <div class="grid lg:grid-cols-3 gap-10">
+
+                    <div>
+
+                        <div class="c2j-eyebrow">
+                            Simple workflow
+                        </div>
+
+                        <h2 class="mt-5 text-3xl font-extrabold">
+                            Less formatting.
+                            More useful output.
+                        </h2>
+
+                    </div>
+
+
+                    <div class="lg:col-span-2 grid md:grid-cols-3 gap-8">
+
+                        <div>
+
+                            <span class="c2j-feature-number">
+                                01
+                            </span>
+
+                            <h3 class="mt-3 font-bold">
+                                Give Code2Job the raw material
+                            </h3>
+
+                            <p class="mt-2 text-sm text-gray-500 leading-6">
+                                Experience, code or a target job description.
+                            </p>
+
+                        </div>
+
+
+                        <div>
+
+                            <span class="c2j-feature-number">
+                                02
+                            </span>
+
+                            <h3 class="mt-3 font-bold">
+                                AI restructures the information
+                            </h3>
+
+                            <p class="mt-2 text-sm text-gray-500 leading-6">
+                                The system focuses on clarity, relevance
+                                and professional wording.
+                            </p>
+
+                        </div>
+
+
+                        <div>
+
+                            <span class="c2j-feature-number">
+                                03
+                            </span>
+
+                            <h3 class="mt-3 font-bold">
+                                Use the result
+                            </h3>
+
+                            <p class="mt-2 text-sm text-gray-500 leading-6">
+                                Review the output and use it for your
+                                next career step.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             Why Code2Job
+        ====================================================== -->
+
+        <section id="why-code2job"
+                 class="c2j-container py-20">
+
+            <div class="max-w-3xl">
+
+                <div class="c2j-eyebrow">
+                    Product principle
+                </div>
+
+                <h2 class="mt-5 text-3xl md:text-4xl font-extrabold">
+                    AI should improve your information,
+                    not manufacture your career.
+                </h2>
+
+                <p class="mt-6 text-gray-500 leading-8">
+                    Code2Job is designed around information you provide.
+                    The goal is to make genuine experience clearer,
+                    more professional and more relevant to a target role
+                    without turning the resume into a collection of
+                    unsupported claims.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             CTA
+        ====================================================== -->
+
+        <section class="c2j-container pb-20">
+
+            <div class="c2j-card p-8 md:p-12 bg-[#17202a]">
+
+                <div class="max-w-2xl">
+
+                    <p class="text-xs uppercase tracking-[0.15em] font-bold text-[#d9a083]">
+                        Start with the MVP
+                    </p>
+
+                    <h2 class="mt-4 text-3xl md:text-4xl font-extrabold text-white">
+                        Start with the information you already have.
+                    </h2>
+
+                    <p class="mt-4 text-gray-300 leading-7">
+                        No need to make your experience sound perfect first.
+                        Give Code2Job the raw version.
+                    </p>
+
+                    <a href="/resume"
+                       class="mt-7 c2j-primary-btn bg-white text-[#17202a] border-white hover:bg-gray-100">
+
+                        Create Resume
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         Footer
+    ====================================================== -->
+
+    <footer class="c2j-footer">
+
+        <div class="c2j-container py-8 flex flex-col md:flex-row justify-between gap-4">
+
+            <p class="text-sm text-gray-500">
+                © 2026 Code2Job. Career tools built around real information.
+            </p>
+
+            <div class="flex gap-5">
+
+                <a href="/resume"
+                   class="text-sm font-semibold text-gray-600">
+                    Resume
+                </a>
+
+                <a href="/sanitizer"
+                   class="text-sm font-semibold text-gray-600">
+                    Code Sanitizer
+                </a>
+
+                <a href="/ats"
+                   class="text-sm font-semibold text-gray-600">
+                    ATS Match
+                </a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</div>
+
+
+<script th:src="@{/js/app.js}"></script>
+
+</body>
+
+</html>
+
