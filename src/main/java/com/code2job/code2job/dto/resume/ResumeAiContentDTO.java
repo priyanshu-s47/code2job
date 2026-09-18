@@ -2,17 +2,7 @@ package com.code2job.code2job.dto.resume;
 
 import java.util.List;
 
-public record ResumeResponseDTO(
-
-        PersonalDetailsDTO personal,
-
-        CareerDetailsDTO career,
-
-        EducationDTO education,
-
-        ExperienceDTO experience,
-
-        ProjectDTO project,
+public record ResumeAiContentDTO(
 
         String professionalSummary,
 

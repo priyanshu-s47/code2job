@@ -1,4 +1,3 @@
-
 /* =========================================================
    Code2Job MVP Design System
    Clean, trustworthy and product-focused visual language
@@ -14,6 +13,7 @@
 
     --c2j-line: #dfddd6;
     --c2j-line-dark: #cbc8bf;
+    --c2j-soft: #efeee9;
 
     --c2j-accent: #c96b3b;
     --c2j-accent-dark: #a94f29;
@@ -57,6 +57,10 @@ select {
 
 button {
     cursor: pointer;
+}
+
+button:disabled {
+    cursor: not-allowed;
 }
 
 a {
@@ -143,6 +147,22 @@ h4 {
     z-index: 100;
 }
 
+.c2j-nav-inner {
+    min-height: 74px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 24px;
+}
+
+.c2j-nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
 .c2j-logo {
     color: var(--c2j-ink);
 
@@ -210,6 +230,12 @@ h4 {
     transform: translateY(-1px);
 
     box-shadow: 0 7px 20px rgba(23, 32, 42, 0.12);
+}
+
+.c2j-primary-btn:disabled {
+    opacity: 0.65;
+    transform: none;
+    box-shadow: none;
 }
 
 .c2j-secondary-btn {
@@ -487,6 +513,139 @@ textarea.c2j-input {
     font-weight: 800;
 }
 
+
+/* =========================================================
+   RESUME INTRO
+   ========================================================= */
+
+.resume-intro {
+    padding: 58px 0 30px;
+}
+
+.resume-intro-content {
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.resume-intro-content h1 {
+    font-size: clamp(38px, 5.5vw, 64px);
+    line-height: 1.03;
+    margin: 18px 0;
+}
+
+.resume-intro-content p {
+    max-width: 700px;
+    margin: 0 auto;
+
+    color: var(--c2j-muted);
+
+    font-size: 17px;
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   RESUME VALUE STRIP
+   ========================================================= */
+
+.resume-value-section {
+    padding: 10px 0 32px;
+}
+
+.resume-value-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.resume-value-card {
+    padding: 16px 18px;
+    text-align: center;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.resume-value-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--c2j-line-dark);
+}
+
+.resume-value-card strong {
+    font-size: 13px;
+}
+
+.resume-value-card .c2j-muted {
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+
+/* =========================================================
+   RESUME BUILDER LAYOUT
+   ========================================================= */
+
+.resume-builder-section {
+    padding: 0 0 80px;
+}
+
+.resume-builder-layout {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 820px)
+        270px;
+
+    gap: 24px;
+
+    align-items: start;
+    justify-content: center;
+}
+
+.resume-builder-card {
+    padding: 32px;
+}
+
+
+/* =========================================================
+   RESUME PROGRESS
+   ========================================================= */
+
+.resume-progress {
+    margin-bottom: 32px;
+}
+
+.resume-progress-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 9px;
+
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.resume-progress-track {
+    height: 5px;
+
+    background: var(--c2j-soft);
+
+    overflow: hidden;
+}
+
+.resume-progress-bar {
+    width: 17%;
+    height: 100%;
+
+    background: var(--c2j-accent);
+
+    transition: width 0.35s ease;
+}
+
+
 /* =========================================================
    SINGLE PAGE RESUME BUILDER
    ========================================================= */
@@ -518,177 +677,12 @@ textarea.c2j-input {
     }
 }
 
-
-/* =========================================================
-   VALIDATION
-   ========================================================= */
-
-.c2j-invalid-input {
-    border-color: #b85c3a !important;
-    box-shadow: 0 0 0 3px rgba(184, 92, 58, 0.10) !important;
-}
-
-.c2j-input::placeholder {
-    color: #a39e95;
-}
-
-
-/* =========================================================
-   FORM MESSAGE
-   ========================================================= */
-
-.c2j-form-message {
-    margin-bottom: 20px;
-    padding: 13px 16px;
-    border: 1px solid var(--c2j-line);
-    border-radius: 8px;
-    font-size: 14px;
-    font-weight: 600;
-}
-
-.c2j-form-message.success {
-    background: #f3f7f2;
-    border-color: #cbd9c7;
-    color: #385437;
-}
-
-.c2j-form-message.error {
-    background: #fbf3ef;
-    border-color: #e4c5b7;
-    color: #8a422b;
-}
-
-
-/* =========================================================
-   ATS PAGE
-   ========================================================= */
-
-.ats-upload-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 20px;
-}
-
-.ats-upload-box {
-    border: 1.5px dashed #cfcac0;
-    border-radius: 10px;
-    background: #fbfaf7;
-    padding: 30px 20px;
-    text-align: center;
-    cursor: pointer;
-    transition:
-        border-color 0.2s ease,
-        background 0.2s ease,
-        transform 0.2s ease;
-}
-
-.ats-upload-box:hover {
-    border-color: var(--c2j-accent);
-    background: #fffdf9;
-    transform: translateY(-2px);
-}
-
-.ats-upload-box.uploaded {
-    border-style: solid;
-    border-color: #9baf91;
-    background: #f5f8f3;
-}
-
-.ats-upload-icon {
-    font-size: 28px;
-    margin-bottom: 10px;
-}
-
-.ats-upload-title {
-    margin: 0 0 6px;
-    font-family: "Manrope", sans-serif;
-    font-size: 16px;
-    font-weight: 800;
-}
-
-.ats-upload-description {
-    margin: 0;
-    color: var(--c2j-muted);
-    font-size: 13px;
-    line-height: 1.6;
-}
-
-.ats-file-name {
-    display: block;
-    margin-top: 12px;
-    color: var(--c2j-accent-dark);
-    font-size: 13px;
-    font-weight: 700;
-    word-break: break-word;
-}
-
-.ats-source-divider {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    margin: 24px 0;
-    color: #8b867e;
-    font-size: 12px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-}
-
-.ats-source-divider::before,
-.ats-source-divider::after {
-    content: "";
-    flex: 1;
-    height: 1px;
-    background: var(--c2j-line);
-}
-
-.ats-message {
-    margin-top: 18px;
-    padding: 13px 16px;
-    border-radius: 8px;
-    font-size: 14px;
-    font-weight: 600;
-}
-
-.ats-message.error {
-    background: #fbf3ef;
-    border: 1px solid #e4c5b7;
-    color: #8a422b;
-}
-
-.ats-result {
-    margin-top: 32px;
-}
-
-@media (max-width: 768px) {
-
-    .ats-upload-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* =========================================================
-   Footer
-   ========================================================= */
-
-.c2j-footer {
-    border-top: 1px solid var(--c2j-line);
-}
-
-.c2j-invalid-input {
-    border-color: #b85c3a !important;
-    box-shadow: 0 0 0 3px rgba(184, 92, 58, 0.10) !important;
-}
-
-.c2j-input::placeholder {
-    color: #a39e95;
-}
-
 .resume-step {
     animation: resumeStepIn 0.25s ease;
 }
 
 @keyframes resumeStepIn {
+
     from {
         opacity: 0;
         transform: translateY(5px);
@@ -700,9 +694,767 @@ textarea.c2j-input {
     }
 }
 
+.resume-step-title {
+    font-size: 30px;
+    margin: 8px 0;
+}
+
+.resume-step-description {
+    line-height: 1.7;
+    margin: 0 0 28px;
+}
+
+.resume-form-grid {
+    display: grid;
+    gap: 20px;
+}
+
+.resume-form-grid-small {
+    display: grid;
+    gap: 12px;
+}
+
+.resume-two-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.resume-field-intro {
+    margin-bottom: 10px;
+}
+
+.resume-field-intro .c2j-label {
+    margin-bottom: 4px;
+}
+
+.resume-field-intro p {
+    margin: 0;
+    font-size: 12px;
+}
+
+.required-mark {
+    color: var(--c2j-accent);
+}
+
+.resume-help-text {
+    font-size: 12px;
+    line-height: 1.5;
+    margin: 7px 0 0;
+}
+
+
 /* =========================================================
-   Responsive
+   RESUME OPTIONAL BANNER
    ========================================================= */
+
+.resume-optional-banner {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+
+    padding: 14px 16px;
+
+    margin-bottom: 22px;
+
+    background: var(--c2j-soft);
+
+    border-left: 3px solid var(--c2j-accent);
+
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.resume-optional-banner strong {
+    flex-shrink: 0;
+    color: var(--c2j-ink);
+}
+
+.resume-optional-banner span {
+    color: var(--c2j-muted);
+}
+
+
+/* =========================================================
+   RESUME INFO BOX
+   ========================================================= */
+
+.resume-info-box {
+    padding: 15px 16px;
+
+    background: var(--c2j-soft);
+
+    border-left: 3px solid var(--c2j-accent);
+}
+
+.resume-info-box strong {
+    font-size: 13px;
+}
+
+.resume-info-box p {
+    color: var(--c2j-muted);
+
+    font-size: 12px;
+    line-height: 1.6;
+
+    margin: 5px 0 0;
+}
+
+
+/* =========================================================
+   CAREER OPTIONS
+   ========================================================= */
+
+.career-options-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+}
+
+.career-option {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 10px;
+
+    min-height: 72px;
+
+    padding: 14px;
+
+    border: 1px solid var(--c2j-line);
+    border-radius: 8px;
+
+    background: #fff;
+
+    color: var(--c2j-ink);
+
+    cursor: pointer;
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.career-option:hover {
+    border-color: #c9c6bd;
+    background: #fbfaf7;
+    transform: translateY(-1px);
+}
+
+.career-option input {
+    margin-top: 3px;
+}
+
+.career-option span {
+    display: grid;
+    gap: 3px;
+}
+
+.career-option strong {
+    font-size: 13px;
+}
+
+.career-option small {
+    color: var(--c2j-muted);
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   RESUME STEP ACTIONS
+   ========================================================= */
+
+.resume-step-actions {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top: 8px;
+}
+
+.resume-step-actions.end {
+    justify-content: flex-end;
+}
+
+
+/* =========================================================
+   FINAL REVIEW / PROMISE
+   ========================================================= */
+
+.resume-promise-box {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+    padding: 20px;
+
+    background: #fbfaf7;
+
+    border: 1px solid var(--c2j-line);
+}
+
+.resume-promise-icon {
+    width: 30px;
+    height: 30px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--c2j-line);
+
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.resume-promise-box strong {
+    font-size: 14px;
+}
+
+.resume-promise-box p {
+    font-size: 12px;
+    line-height: 1.7;
+    margin: 6px 0 0;
+}
+
+.resume-final-note {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 13px 15px;
+
+    border-top: 1px solid var(--c2j-line);
+    border-bottom: 1px solid var(--c2j-line);
+
+    color: var(--c2j-muted);
+
+    font-size: 12px;
+}
+
+.resume-final-note strong {
+    color: var(--c2j-accent-dark);
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   GENERATION STATE
+   ========================================================= */
+
+.c2j-generation-panel {
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 46px 38px;
+
+    border: 1px solid var(--c2j-line);
+    border-radius: var(--c2j-radius);
+
+    background: var(--c2j-white);
+
+    box-shadow: var(--c2j-shadow);
+
+    text-align: center;
+}
+
+.c2j-generation-panel::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 3px;
+
+    background: var(--c2j-accent);
+}
+
+.c2j-generation-kicker {
+    color: var(--c2j-accent-dark);
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 0.13em;
+
+    text-transform: uppercase;
+}
+
+.c2j-generation-title {
+    margin: 12px 0 8px;
+
+    font-size: 30px;
+    line-height: 1.15;
+}
+
+.c2j-generation-description {
+    max-width: 560px;
+
+    margin: 0 auto;
+
+    color: var(--c2j-muted);
+
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.c2j-generation-loader {
+    width: 58px;
+    height: 58px;
+
+    margin: 28px auto 22px;
+
+    border: 4px solid #ebe8e1;
+    border-top-color: var(--c2j-accent);
+
+    border-radius: 50%;
+
+    animation: c2jGenerationSpin 0.9s linear infinite;
+}
+
+@keyframes c2jGenerationSpin {
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.c2j-generation-stage {
+    min-height: 24px;
+
+    color: var(--c2j-ink);
+
+    font-size: 14px;
+    font-weight: 800;
+
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
+}
+
+.c2j-generation-progress {
+    max-width: 500px;
+
+    height: 6px;
+
+    margin: 18px auto 10px;
+
+    overflow: hidden;
+
+    background: var(--c2j-soft);
+}
+
+.c2j-generation-progress-bar {
+    width: 10%;
+    height: 100%;
+
+    background: var(--c2j-accent);
+
+    transition: width 0.5s ease;
+}
+
+.c2j-generation-percent {
+    color: var(--c2j-muted);
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.c2j-generation-note {
+    margin-top: 24px;
+
+    color: #8b867e;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   RESUME SIDEBAR
+   ========================================================= */
+
+.resume-sidebar {
+    position: sticky;
+    top: 92px;
+}
+
+.resume-sidebar-card {
+    padding: 22px;
+
+    margin-bottom: 14px;
+}
+
+.resume-sidebar-card h3 {
+    font-size: 19px;
+    margin: 8px 0 16px;
+}
+
+.resume-sidebar-points {
+    display: grid;
+    gap: 17px;
+}
+
+.resume-sidebar-points strong {
+    font-size: 13px;
+}
+
+.resume-sidebar-points p {
+    font-size: 12px;
+    line-height: 1.6;
+
+    margin: 4px 0 0;
+}
+
+.resume-sidebar-card ul {
+    margin: 0;
+
+    padding-left: 17px;
+
+    color: var(--c2j-muted);
+
+    font-size: 12px;
+    line-height: 1.75;
+}
+
+.resume-sidebar-card li + li {
+    margin-top: 7px;
+}
+
+.resume-sidebar-tip {
+    padding: 4px 2px 0;
+}
+
+.resume-sidebar-tip p {
+    font-size: 11px;
+    line-height: 1.7;
+
+    margin: 0;
+}
+
+
+/* =========================================================
+   VALIDATION
+   ========================================================= */
+
+.c2j-invalid-input {
+    border-color: #b85c3a !important;
+
+    box-shadow:
+        0 0 0 3px rgba(184, 92, 58, 0.10) !important;
+}
+
+
+/* =========================================================
+   FORM MESSAGE
+   ========================================================= */
+
+.c2j-form-message {
+    margin-bottom: 20px;
+
+    padding: 13px 16px;
+
+    border: 1px solid var(--c2j-line);
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.c2j-form-message.success {
+    background: #f3f7f2;
+
+    border-color: #cbd9c7;
+
+    color: #385437;
+}
+
+.c2j-form-message.error {
+    background: #fbf3ef;
+
+    border-color: #e4c5b7;
+
+    color: #8a422b;
+}
+
+
+/* =========================================================
+   ATS PAGE
+   ========================================================= */
+
+.ats-upload-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+.ats-upload-box {
+    border: 1.5px dashed #cfcac0;
+    border-radius: 10px;
+
+    background: #fbfaf7;
+
+    padding: 30px 20px;
+
+    text-align: center;
+
+    cursor: pointer;
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.ats-upload-box:hover {
+    border-color: var(--c2j-accent);
+
+    background: #fffdf9;
+
+    transform: translateY(-2px);
+}
+
+.ats-upload-box.uploaded {
+    border-style: solid;
+
+    border-color: #9baf91;
+
+    background: #f5f8f3;
+}
+
+.ats-upload-icon {
+    font-size: 28px;
+
+    margin-bottom: 10px;
+}
+
+.ats-upload-title {
+    margin: 0 0 6px;
+
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.ats-upload-description {
+    margin: 0;
+
+    color: var(--c2j-muted);
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+.ats-file-name {
+    display: block;
+
+    margin-top: 12px;
+
+    color: var(--c2j-accent-dark);
+
+    font-size: 13px;
+    font-weight: 700;
+
+    word-break: break-word;
+}
+
+.ats-source-divider {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    margin: 24px 0;
+
+    color: #8b867e;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.08em;
+}
+
+.ats-source-divider::before,
+.ats-source-divider::after {
+    content: "";
+
+    flex: 1;
+
+    height: 1px;
+
+    background: var(--c2j-line);
+}
+
+.ats-message {
+    margin-top: 18px;
+
+    padding: 13px 16px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.ats-message.error {
+    background: #fbf3ef;
+
+    border: 1px solid #e4c5b7;
+
+    color: #8a422b;
+}
+
+.ats-result {
+    margin-top: 32px;
+}
+
+
+/* =========================================================
+   RESUME PREVIEW
+   ========================================================= */
+
+#generatedResumeResult,
+#generatedResume {
+    background: #ffffff;
+}
+
+#generatedResumeResult {
+    overflow: hidden;
+}
+
+#generatedResumeResult h1,
+#generatedResumeResult h2,
+#generatedResumeResult h3 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.c2j-footer {
+    border-top: 1px solid var(--c2j-line);
+}
+
+.c2j-footer-inner {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 30px 0;
+
+    flex-wrap: wrap;
+}
+
+.c2j-footer-inner p {
+    font-size: 12px;
+    margin: 7px 0 0;
+}
+
+.c2j-footer-links {
+    display: flex;
+    gap: 18px;
+}
+
+
+/* =========================================================
+   PRINT
+   ========================================================= */
+
+@media print {
+
+    body {
+        background: white !important;
+    }
+
+    body * {
+        visibility: hidden;
+    }
+
+    #generatedResumeResult,
+    #generatedResumeResult * {
+        visibility: visible;
+    }
+
+    #generatedResumeResult {
+        position: absolute;
+
+        left: 0;
+        top: 0;
+
+        width: 100%;
+
+        margin: 0 !important;
+
+        border: none !important;
+
+        box-shadow: none !important;
+    }
+
+    #generatedResumeResult button {
+        display: none !important;
+    }
+
+    .c2j-nav {
+        display: none !important;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 950px) {
+
+    .resume-builder-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .resume-sidebar {
+        position: static;
+
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 14px;
+    }
+
+    .resume-sidebar-card {
+        margin-bottom: 0;
+    }
+
+    .resume-sidebar-tip {
+        grid-column: 1 / -1;
+    }
+}
+
 
 @media (max-width: 768px) {
 
@@ -714,13 +1466,134 @@ textarea.c2j-input {
         position: relative;
     }
 
-    .c2j-feature-card {
-        min-height: auto;
+    .c2j-nav-inner {
+        min-height: 68px;
     }
 
-    .c2j-product-preview {
-        margin-top: 35px;
+    .c2j-nav-menu {
+        gap: 12px;
+    }
+
+    .c2j-nav-link {
+        font-size: 12px;
+    }
+
+    .resume-intro {
+        padding: 44px 0 24px;
+    }
+
+    .resume-intro-content h1 {
+        font-size: clamp(34px, 10vw, 48px);
+    }
+
+    .resume-intro-content p {
+        font-size: 15px;
+    }
+
+    .resume-value-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .resume-builder-card {
+        padding: 22px;
+    }
+
+    .resume-two-column {
+        grid-template-columns: 1fr;
+    }
+
+    .career-options-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .resume-step-title {
+        font-size: 26px;
+    }
+
+    .resume-step-actions {
+        flex-direction: column-reverse;
+        align-items: stretch;
+    }
+
+    .resume-step-actions .c2j-primary-btn,
+    .resume-step-actions .c2j-secondary-btn {
+        width: 100%;
+    }
+
+    .resume-step-actions.end {
+        align-items: stretch;
+    }
+
+    .resume-optional-banner {
+        flex-direction: column;
+        gap: 2px;
+    }
+
+    .resume-final-note {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .resume-final-note strong {
+        white-space: normal;
+    }
+
+    .c2j-generation-panel {
+        padding: 38px 22px;
+    }
+
+    .c2j-generation-title {
+        font-size: 26px;
+    }
+
+    .resume-sidebar {
+        display: block;
+    }
+
+    .resume-sidebar-card {
+        margin-bottom: 14px;
+    }
+
+    .ats-upload-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .c2j-footer-inner {
+        align-items: flex-start;
     }
 
 }
 
+
+@media (max-width: 520px) {
+
+    .c2j-nav-inner {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        padding: 15px 0;
+    }
+
+    .c2j-nav-menu {
+        width: 100%;
+
+        justify-content: space-between;
+
+        gap: 8px;
+    }
+
+    .resume-builder-card {
+        padding: 18px;
+    }
+
+    .resume-progress {
+        margin-bottom: 26px;
+    }
+
+    .c2j-generation-loader {
+        width: 50px;
+        height: 50px;
+    }
+
+}

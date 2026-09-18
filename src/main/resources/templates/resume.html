@@ -59,26 +59,14 @@
 
     <header class="c2j-nav">
 
-        <div class="c2j-container"
-             style="
-                min-height:76px;
-                display:flex;
-                align-items:center;
-                justify-content:space-between;
-                gap:24px;
-             ">
+        <div class="c2j-container c2j-nav-inner">
 
             <a href="/"
                class="c2j-logo">
                 Code<span>2</span>Job
             </a>
 
-
-            <nav style="
-                display:flex;
-                align-items:center;
-                gap:22px;
-            ">
+            <nav class="c2j-nav-menu">
 
                 <a href="/"
                    class="c2j-nav-link">
@@ -102,53 +90,33 @@
     </header>
 
 
-
     <!-- =========================================================
          PAGE INTRO
          ========================================================= -->
 
     <main>
 
-        <section style="
-            padding:58px 0 30px;
-        ">
+        <section class="resume-intro">
 
             <div class="c2j-container">
 
-                <div style="
-                    max-width:850px;
-                    margin:0 auto;
-                    text-align:center;
-                ">
+                <div class="resume-intro-content">
 
-                    <div class="c2j-eyebrow"
-                         style="justify-content:center;">
+                    <div class="c2j-eyebrow">
                         AI Resume Builder
                     </div>
 
-
-                    <h1 style="
-                        font-size:clamp(38px,5.5vw,64px);
-                        line-height:1.03;
-                        margin:18px 0;
-                    ">
+                    <h1>
                         Tell us about yourself.
                         <br>
                         We'll handle the resume wording.
                     </h1>
 
-
-                    <p style="
-                        max-width:700px;
-                        margin:0 auto;
-                        color:var(--c2j-muted);
-                        font-size:17px;
-                        line-height:1.75;
-                    ">
+                    <p>
                         No need to sound professional while filling this form.
                         Tell us what you actually did, in your own words.
-                        Code2Job is designed to turn that information into
-                        structured, recruiter-friendly resume content.
+                        Code2Job turns that information into structured,
+                        recruiter-friendly resume content.
                     </p>
 
                 </div>
@@ -158,83 +126,40 @@
         </section>
 
 
-
         <!-- =========================================================
              QUICK VALUE POINTS
              ========================================================= -->
 
-        <section style="
-            padding:10px 0 32px;
-        ">
+        <section class="resume-value-section">
 
             <div class="c2j-container">
 
-                <div style="
-                    display:grid;
-                    grid-template-columns:repeat(3,1fr);
-                    gap:12px;
-                ">
+                <div class="resume-value-grid">
 
-                    <div class="c2j-card"
-                         style="
-                            padding:16px 18px;
-                            text-align:center;
-                         ">
+                    <div class="c2j-card resume-value-card">
+                        <strong>Write naturally</strong>
 
-                        <strong style="font-size:13px;">
-                            Write naturally
-                        </strong>
-
-                        <div class="c2j-muted"
-                             style="
-                                font-size:12px;
-                                margin-top:5px;
-                             ">
+                        <div class="c2j-muted">
                             English, Hinglish or rough notes
                         </div>
-
                     </div>
 
 
-                    <div class="c2j-card"
-                         style="
-                            padding:16px 18px;
-                            text-align:center;
-                         ">
+                    <div class="c2j-card resume-value-card">
+                        <strong>Skip what doesn't apply</strong>
 
-                        <strong style="font-size:13px;">
-                            Skip what doesn't apply
-                        </strong>
-
-                        <div class="c2j-muted"
-                             style="
-                                font-size:12px;
-                                margin-top:5px;
-                             ">
-                            Your resume doesn't need every section
+                        <div class="c2j-muted">
+                            Optional sections can be skipped
                         </div>
-
                     </div>
 
 
-                    <div class="c2j-card"
-                         style="
-                            padding:16px 18px;
-                            text-align:center;
-                         ">
+                    <div class="c2j-card resume-value-card">
+                        <strong>Your facts stay yours</strong>
 
-                        <strong style="font-size:13px;">
-                            Your facts stay yours
-                        </strong>
-
-                        <div class="c2j-muted"
-                             style="
-                                font-size:12px;
-                                margin-top:5px;
-                             ">
+                        <div class="c2j-muted">
                             No invented achievements or experience
                         </div>
-
                     </div>
 
                 </div>
@@ -244,83 +169,48 @@
         </section>
 
 
-
         <!-- =========================================================
              BUILDER AREA
              ========================================================= -->
 
-        <section style="
-            padding:0 0 80px;
-        ">
+        <section class="resume-builder-section">
 
             <div class="c2j-container">
 
-                <div style="
-                    display:grid;
-                    grid-template-columns:minmax(0,820px) 270px;
-                    gap:24px;
-                    align-items:start;
-                    justify-content:center;
-                ">
+                <div class="resume-builder-layout">
 
 
                     <!-- =================================================
                          MAIN BUILDER
                          ================================================= -->
 
-                    <div class="c2j-card"
-                         style="
-                            padding:32px;
-                         ">
+                    <div id="resumeBuilderCard"
+                         class="c2j-card resume-builder-card">
 
 
                         <!-- =================================================
                              PROGRESS
                              ================================================= -->
 
-                        <div style="
-                            margin-bottom:32px;
-                        ">
+                        <div class="resume-progress">
 
-                            <div style="
-                                display:flex;
-                                justify-content:space-between;
-                                align-items:center;
-                                margin-bottom:9px;
-                            ">
+                            <div class="resume-progress-header">
 
-                                <span id="progressText"
-                                      style="
-                                        font-size:12px;
-                                        font-weight:800;
-                                      ">
+                                <span id="progressText">
                                     Step 1 of 6
                                 </span>
 
                                 <span id="progressPercent"
-                                      class="c2j-muted"
-                                      style="
-                                        font-size:12px;
-                                      ">
+                                      class="c2j-muted">
                                     17%
                                 </span>
 
                             </div>
 
-
-                            <div style="
-                                height:5px;
-                                background:var(--c2j-soft);
-                                overflow:hidden;
-                            ">
+                            <div class="resume-progress-track">
 
                                 <div id="progressBar"
-                                     style="
-                                        width:17%;
-                                        height:100%;
-                                        background:var(--c2j-accent);
-                                        transition:width .3s ease;
-                                     ">
+                                     class="resume-progress-bar">
                                 </div>
 
                             </div>
@@ -328,1380 +218,1129 @@
                         </div>
 
 
-
                         <!-- =================================================
-                             STEP 1 — PERSONAL
+                             FORM
                              ================================================= -->
 
-                        <section id="step1"
-                                 class="resume-step">
-
-                            <div class="c2j-feature-number">
-                                STEP 01
-                            </div>
-
-                            <h2 style="
-                                font-size:30px;
-                                margin:8px 0 8px;
-                            ">
-                                Let's start with you.
-                            </h2>
-
-                            <p class="c2j-muted"
-                               style="
-                                    line-height:1.7;
-                                    margin:0 0 28px;
-                               ">
-                                Just the basic information an employer needs
-                                to identify and contact you.
-                            </p>
+                        <div id="resumeForm">
 
 
-                            <div style="
-                                display:grid;
-                                gap:20px;
-                            ">
+                            <!-- =================================================
+                                 STEP 1 — PERSONAL
+                                 ================================================= -->
 
-                                <div>
+                            <section id="step1"
+                                     class="resume-step">
 
-                                    <label for="fullName"
-                                           class="c2j-label">
-                                        Full name
-                                        <span style="color:var(--c2j-accent);">*</span>
-                                    </label>
-
-                                    <input
-                                            id="fullName"
-                                            type="text"
-                                            class="c2j-input"
-                                            placeholder="e.g. Priyanshu Sharma">
-
+                                <div class="c2j-feature-number">
+                                    STEP 01
                                 </div>
 
-
-                                <div style="
-                                    display:grid;
-                                    grid-template-columns:1fr 1fr;
-                                    gap:16px;
-                                ">
-
-                                    <div>
-
-                                        <label for="email"
-                                               class="c2j-label">
-                                            Email
-                                            <span style="color:var(--c2j-accent);">*</span>
-                                        </label>
-
-                                        <input
-                                                id="email"
-                                                type="email"
-                                                class="c2j-input"
-                                                placeholder="e.g. you@example.com">
-
-                                    </div>
-
-
-                                    <div>
-
-                                        <label for="phone"
-                                               class="c2j-label">
-                                            Phone
-                                            <span style="color:var(--c2j-accent);">*</span>
-                                        </label>
-
-                                        <input
-                                                id="phone"
-                                                type="tel"
-                                                class="c2j-input"
-                                                placeholder="+91 9876543210">
-
-                                    </div>
-
-                                </div>
-
-
-                                <div>
-
-                                    <label for="location"
-                                           class="c2j-label">
-                                        Current location
-                                        <span style="color:var(--c2j-accent);">*</span>
-                                    </label>
-
-                                    <input
-                                            id="location"
-                                            type="text"
-                                            class="c2j-input"
-                                            placeholder="e.g. Saharanpur, India">
-
-                                </div>
-
-
-                                <div>
-
-                                    <div style="margin-bottom:10px;">
-
-                                        <label class="c2j-label"
-                                               style="margin-bottom:4px;">
-                                            Professional profiles
-                                        </label>
-
-                                        <p class="c2j-muted"
-                                           style="
-                                                margin:0;
-                                                font-size:12px;
-                                           ">
-                                            Optional — add only the profiles
-                                            you actually use.
-                                        </p>
-
-                                    </div>
-
-
-                                    <div style="
-                                        display:grid;
-                                        gap:12px;
-                                    ">
-
-                                        <input
-                                                id="linkedin"
-                                                type="url"
-                                                class="c2j-input"
-                                                placeholder="https://www.linkedin.com/in/priyanshu-s47">
-
-                                        <input
-                                                id="github"
-                                                type="url"
-                                                class="c2j-input"
-                                                placeholder="https://github.com/priyanshu-s47">
-
-                                        <input
-                                                id="portfolio"
-                                                type="url"
-                                                class="c2j-input"
-                                                placeholder="Portfolio / personal website URL">
-
-                                    </div>
-
-                                </div>
-
-
-                                <div style="
-                                    display:flex;
-                                    justify-content:flex-end;
-                                    margin-top:8px;
-                                ">
-
-                                    <button
-                                            type="button"
-                                            id="nextToCareer"
-                                            class="c2j-primary-btn">
-
-                                        Continue to Career →
-
-                                    </button>
-
-                                </div>
-
-                            </div>
-
-                        </section>
-
-
-
-                        <!-- =================================================
-                             STEP 2 — CAREER
-                             ================================================= -->
-
-                        <section id="step2"
-                                 class="resume-step ">
-
-                            <div class="c2j-feature-number">
-                                STEP 02
-                            </div>
-
-                            <h2 style="
-                                font-size:30px;
-                                margin:8px 0 8px;
-                            ">
-                                Where are you heading?
-                            </h2>
-
-                            <p class="c2j-muted"
-                               style="
-                                    line-height:1.7;
-                                    margin:0 0 28px;
-                               ">
-                                Tell us what kind of opportunity you're
-                                targeting. This helps shape the resume around
-                                your career direction.
-                            </p>
-
-
-                            <div style="
-                                display:grid;
-                                gap:20px;
-                            ">
-
-                                <div>
-
-                                    <label class="c2j-label">
-                                        Which describes you?
-                                        <span style="color:var(--c2j-accent);">*</span>
-                                    </label>
-
-
-                                    <div style="
-                                        display:grid;
-                                        grid-template-columns:1fr 1fr;
-                                        gap:10px;
-                                    ">
-
-                                        <label class="c2j-card"
-                                               style="
-                                                    padding:15px;
-                                                    cursor:pointer;
-                                               ">
-
-                                            <input
-                                                    type="radio"
-                                                    name="careerType"
-                                                    value="FRESHER">
-
-                                            <strong style="margin-left:6px;">
-                                                Fresher / Student
-                                            </strong>
-
-                                            <div class="c2j-muted"
-                                                 style="
-                                                    font-size:11px;
-                                                    margin:6px 0 0 22px;
-                                                 ">
-                                                Starting your career
-                                            </div>
-
-                                        </label>
-
-
-                                        <label class="c2j-card"
-                                               style="
-                                                    padding:15px;
-                                                    cursor:pointer;
-                                               ">
-
-                                            <input
-                                                    type="radio"
-                                                    name="careerType"
-                                                    value="EXPERIENCED">
-
-                                            <strong style="margin-left:6px;">
-                                                Experienced
-                                            </strong>
-
-                                            <div class="c2j-muted"
-                                                 style="
-                                                    font-size:11px;
-                                                    margin:6px 0 0 22px;
-                                                 ">
-                                                Already working professionally
-                                            </div>
-
-                                        </label>
-
-
-                                        <label class="c2j-card"
-                                               style="
-                                                    padding:15px;
-                                                    cursor:pointer;
-                                               ">
-
-                                            <input
-                                                    type="radio"
-                                                    name="careerType"
-                                                    value="CAREER_SWITCHER">
-
-                                            <strong style="margin-left:6px;">
-                                                Career Switcher
-                                            </strong>
-
-                                            <div class="c2j-muted"
-                                                 style="
-                                                    font-size:11px;
-                                                    margin:6px 0 0 22px;
-                                                 ">
-                                                Moving to another field
-                                            </div>
-
-                                        </label>
-
-
-                                        <label class="c2j-card"
-                                               style="
-                                                    padding:15px;
-                                                    cursor:pointer;
-                                               ">
-
-                                            <input
-                                                    type="radio"
-                                                    name="careerType"
-                                                    value="FREELANCER">
-
-                                            <strong style="margin-left:6px;">
-                                                Freelancer / Consultant
-                                            </strong>
-
-                                            <div class="c2j-muted"
-                                                 style="
-                                                    font-size:11px;
-                                                    margin:6px 0 0 22px;
-                                                 ">
-                                                Independent or client work
-                                            </div>
-
-                                        </label>
-
-                                    </div>
-
-                                </div>
-
-
-                                <div>
-
-                                    <label for="targetRole"
-                                           class="c2j-label">
-                                        Target job role
-                                        <span style="color:var(--c2j-accent);">*</span>
-                                    </label>
-
-                                    <input
-                                            id="targetRole"
-                                            type="text"
-                                            class="c2j-input"
-                                            placeholder="e.g. Java Backend Developer">
-
-                                </div>
-
-
-                                <div>
-
-                                    <label for="industry"
-                                           class="c2j-label">
-                                        Domain / industry
-                                        <span style="color:var(--c2j-accent);">*</span>
-                                    </label>
-
-                                    <input
-                                            id="industry"
-                                            type="text"
-                                            class="c2j-input"
-                                            placeholder="e.g. Software Development, Banking, Pharma, Education">
-
-                                </div>
-
-
-                                <div>
-
-                                    <label for="totalExperience"
-                                           class="c2j-label">
-                                        Total professional experience
-                                    </label>
-
-                                    <input
-                                            id="totalExperience"
-                                            type="text"
-                                            class="c2j-input"
-                                            placeholder="e.g. 2 years 6 months">
-
-                                    <p class="c2j-muted"
-                                       style="
-                                            font-size:12px;
-                                            margin:6px 0 0;
-                                       ">
-                                        Optional — leave blank if you're a fresher.
-                                    </p>
-
-                                </div>
-
-
-                                <div>
-
-                                    <label for="careerContext"
-                                           class="c2j-label">
-                                        Anything important about your career path?
-                                    </label>
-
-                                    <textarea
-                                            id="careerContext"
-                                            class="c2j-input"
-                                            rows="4"
-                                            placeholder="English example:
-I am transitioning from customer support into software development and have been building Java applications independently.
-
-Hinglish example:
-Main customer support se software development me shift kar raha hoon aur side me Java applications bana raha hoon."></textarea>
-
-                                    <p class="c2j-muted"
-                                       style="
-                                            font-size:12px;
-                                            line-height:1.5;
-                                            margin:7px 0 0;
-                                       ">
-                                        Optional — don't write a formal summary.
-                                        Just give context if your career path needs explanation.
-                                    </p>
-
-                                </div>
-
-
-                                <div style="
-                                    display:flex;
-                                    justify-content:space-between;
-                                    margin-top:8px;
-                                ">
-
-                                    <button
-                                            type="button"
-                                            id="backToPersonal"
-                                            class="c2j-secondary-btn">
-                                        ← Back
-                                    </button>
-
-
-                                    <button
-                                            type="button"
-                                            id="nextToEducation"
-                                            class="c2j-primary-btn">
-                                        Continue to Education →
-                                    </button>
-
-                                </div>
-
-                            </div>
-
-                        </section>
-
-
-
-                        <!-- =================================================
-                             STEP 3 — EDUCATION
-                             ================================================= -->
-
-                        <section id="step3"
-                                 class="resume-step">
-
-                            <div class="c2j-feature-number">
-                                STEP 03
-                            </div>
-
-                            <h2 style="
-                                font-size:30px;
-                                margin:8px 0 8px;
-                            ">
-                                What have you studied?
-                            </h2>
-
-                            <p class="c2j-muted"
-                               style="
-                                    line-height:1.7;
-                                    margin:0 0 28px;
-                               ">
-                                Add your most relevant academic qualification.
-                                You can add more education entries later.
-                            </p>
-
-
-                            <div style="
-                                display:grid;
-                                gap:20px;
-                            ">
-
-                                <div>
-
-                                    <label for="degree"
-                                           class="c2j-label">
-                                        Degree / Qualification
-                                    </label>
-
-                                    <input
-                                            id="degree"
-                                            type="text"
-                                            class="c2j-input"
-                                            placeholder="e.g. Master of Computer Applications">
-
-                                </div>
-
-
-                                <div>
-
-                                    <label for="institution"
-                                           class="c2j-label">
-                                        College / University / Institution
-                                    </label>
-
-                                    <input
-                                            id="institution"
-                                            type="text"
-                                            class="c2j-input"
-                                            placeholder="e.g. XYZ University">
-
-                                </div>
-
-
-                                <div>
-
-                                    <label for="specialization"
-                                           class="c2j-label">
-                                        Field / Specialization
-                                    </label>
-
-                                    <input
-                                            id="specialization"
-                                            type="text"
-                                            class="c2j-input"
-                                            placeholder="e.g. Computer Applications">
-
-                                </div>
-
-
-                                <div style="
-                                    display:grid;
-                                    grid-template-columns:1fr 1fr;
-                                    gap:16px;
-                                ">
-
-                                    <div>
-
-                                        <label for="educationStartYear"
-                                               class="c2j-label">
-                                            Start year
-                                        </label>
-
-                                        <input
-                                                id="educationStartYear"
-                                                type="text"
-                                                class="c2j-input"
-                                                placeholder="e.g. 2023">
-
-                                    </div>
-
-
-                                    <div>
-
-                                        <label for="educationEndYear"
-                                               class="c2j-label">
-                                            End year
-                                        </label>
-
-                                        <input
-                                                id="educationEndYear"
-                                                type="text"
-                                                class="c2j-input"
-                                                placeholder="e.g. 2025">
-
-                                    </div>
-
-                                </div>
-
-
-                                <div>
-
-                                    <label for="educationGrade"
-                                           class="c2j-label">
-                                        CGPA / Percentage / Grade
-                                    </label>
-
-                                    <input
-                                            id="educationGrade"
-                                            type="text"
-                                            class="c2j-input"
-                                            placeholder="e.g. 8.2 CGPA">
-
-                                    <p class="c2j-muted"
-                                       style="
-                                            font-size:12px;
-                                            margin:7px 0 0;
-                                       ">
-                                        Optional — include it if it represents you well
-                                        and is relevant to the application.
-                                    </p>
-
-                                </div>
-
-
-                                <div style="
-                                    padding:15px 16px;
-                                    background:var(--c2j-soft);
-                                    border-left:3px solid var(--c2j-accent);
-                                ">
-
-                                    <strong style="font-size:13px;">
-                                        Don't have a traditional degree?
-                                    </strong>
-
-                                    <p class="c2j-muted"
-                                       style="
-                                            font-size:12px;
-                                            line-height:1.6;
-                                            margin:5px 0 0;
-                                       ">
-                                        That's okay. Relevant diplomas, certifications,
-                                        vocational education, training or practical learning
-                                        can also be included.
-                                    </p>
-
-                                </div>
-
-
-                                <div style="
-                                    display:flex;
-                                    justify-content:space-between;
-                                    margin-top:8px;
-                                ">
-
-                                    <button
-                                            type="button"
-                                            id="backToCareer"
-                                            class="c2j-secondary-btn">
-                                        ← Back
-                                    </button>
-
-
-                                    <button
-                                            type="button"
-                                            id="nextToExperience"
-                                            class="c2j-primary-btn">
-                                        Continue to Experience →
-                                    </button>
-
-                                </div>
-
-                            </div>
-
-                        </section>
-
-
-
-                        <!-- =================================================
-                             STEP 4 — EXPERIENCE
-                             ================================================= -->
-
-                        <section id="step4"
-                                 class="resume-step ">
-
-                            <div class="c2j-feature-number">
-                                STEP 04
-                            </div>
-
-                            <h2 style="
-                                font-size:30px;
-                                margin:8px 0 8px;
-                            ">
-                                What have you actually done?
-                            </h2>
-
-                            <p class="c2j-muted"
-                               style="
-                                    line-height:1.7;
-                                    margin:0 0 22px;
-                               ">
-                                Don't worry about resume language here.
-                                Tell us what you worked on and we'll structure it.
-                            </p>
-
-
-                            <div style="
-                                padding:15px 16px;
-                                background:var(--c2j-soft);
-                                border-left:3px solid var(--c2j-accent);
-                                margin-bottom:22px;
-                            ">
-
-                                <strong style="font-size:13px;">
-                                    No professional experience?
-                                </strong>
-
-                                <p class="c2j-muted"
-                                   style="
-                                        font-size:12px;
-                                        line-height:1.6;
-                                        margin:5px 0 0;
-                                   ">
-                                    Skip this section. Your projects, education,
-                                    skills and other practical work can carry the resume.
+                                <h2 class="resume-step-title">
+                                    Let's start with you.
+                                </h2>
+
+                                <p class="c2j-muted resume-step-description">
+                                    Basic information an employer needs to
+                                    identify and contact you.
                                 </p>
 
-                            </div>
 
-
-                            <div style="
-                                display:grid;
-                                gap:20px;
-                            ">
-
-                                <div>
-
-                                    <label for="company"
-                                           class="c2j-label">
-                                        Company / Organization
-                                    </label>
-
-                                    <input
-                                            id="company"
-                                            type="text"
-                                            class="c2j-input"
-                                            placeholder="e.g. ABC Technologies">
-
-                                </div>
-
-
-                                <div style="
-                                    display:grid;
-                                    grid-template-columns:1fr 1fr;
-                                    gap:16px;
-                                ">
+                                <div class="resume-form-grid">
 
                                     <div>
 
-                                        <label for="jobTitle"
+                                        <label for="fullName"
                                                class="c2j-label">
-                                            Job title
+                                            Full name
+                                            <span class="required-mark">*</span>
                                         </label>
 
                                         <input
-                                                id="jobTitle"
+                                                id="fullName"
                                                 type="text"
                                                 class="c2j-input"
-                                                placeholder="e.g. Software Developer">
+                                                placeholder="e.g. Priyanshu Sharma">
 
                                     </div>
 
 
-                                    <div>
+                                    <div class="resume-two-column">
 
-                                        <label for="jobLocation"
-                                               class="c2j-label">
-                                            Work location
-                                        </label>
+                                        <div>
 
-                                        <input
-                                                id="jobLocation"
-                                                type="text"
-                                                class="c2j-input"
-                                                placeholder="e.g. Delhi, India">
+                                            <label for="email"
+                                                   class="c2j-label">
+                                                Email
+                                                <span class="required-mark">*</span>
+                                            </label>
 
-                                    </div>
+                                            <input
+                                                    id="email"
+                                                    type="email"
+                                                    class="c2j-input"
+                                                    placeholder="e.g. you@example.com">
 
-                                </div>
-
-
-                                <div style="
-                                    display:grid;
-                                    grid-template-columns:1fr 1fr;
-                                    gap:16px;
-                                ">
-
-                                    <div>
-
-                                        <label for="jobStartDate"
-                                               class="c2j-label">
-                                            Start date
-                                        </label>
-
-                                        <input
-                                                id="jobStartDate"
-                                                type="text"
-                                                class="c2j-input"
-                                                placeholder="e.g. June 2024">
-
-                                    </div>
-
-
-                                    <div>
-
-                                        <label for="jobEndDate"
-                                               class="c2j-label">
-                                            End date
-                                        </label>
-
-                                        <input
-                                                id="jobEndDate"
-                                                type="text"
-                                                class="c2j-input"
-                                                placeholder="e.g. Present">
-
-                                    </div>
-
-                                </div>
-
-
-                                <div>
-
-                                    <label for="responsibilities"
-                                           class="c2j-label">
-                                        What did you do?
-                                    </label>
-
-                                    <textarea
-                                            id="responsibilities"
-                                            class="c2j-input"
-                                            rows="7"
-                                            placeholder="English example:
-Built an inventory management website for a local retail business. Managed product records and created features for tracking stock.
-
-Hinglish example:
-Maine ek local shop ke liye inventory management website banayi thi. Product records manage kiye aur stock track karne ke features banaye."></textarea>
-
-                                    <p class="c2j-muted"
-                                       style="
-                                            font-size:12px;
-                                            line-height:1.5;
-                                            margin:7px 0 0;
-                                       ">
-                                        Rough notes are welcome. You don't need to turn them
-                                        into resume bullets yourself.
-                                    </p>
-
-                                </div>
-
-
-                                <div>
-
-                                    <label for="experienceTools"
-                                           class="c2j-label">
-                                        Tools / technologies / software
-                                    </label>
-
-                                    <input
-                                            id="experienceTools"
-                                            type="text"
-                                            class="c2j-input"
-                                            placeholder="e.g. Java, Spring Boot, Excel, SAP, AutoCAD">
-
-                                </div>
-
-
-                                <div>
-
-                                    <label for="experienceResults"
-                                           class="c2j-label">
-                                        Results or improvements
-                                    </label>
-
-                                    <textarea
-                                            id="experienceResults"
-                                            class="c2j-input"
-                                            rows="5"
-                                            placeholder="English example:
-Reduced manual stock tracking work and made product records easier to maintain.
-
-Hinglish example:
-Manual stock ka kaam kam ho gaya aur product records maintain karna easier ho gaya."></textarea>
-
-                                    <p class="c2j-muted"
-                                       style="
-                                            font-size:12px;
-                                            line-height:1.5;
-                                            margin:7px 0 0;
-                                       ">
-                                        Optional — only provide genuine results or numbers.
-                                        Never add a metric just because it sounds impressive.
-                                    </p>
-
-                                </div>
-
-
-                                <div style="
-                                    display:flex;
-                                    justify-content:space-between;
-                                    margin-top:8px;
-                                ">
-
-                                    <button
-                                            type="button"
-                                            id="backToEducation"
-                                            class="c2j-secondary-btn">
-                                        ← Back
-                                    </button>
-
-
-                                    <button
-                                            type="button"
-                                            id="nextToProjects"
-                                            class="c2j-primary-btn">
-                                        Continue to Projects →
-                                    </button>
-
-                                </div>
-
-                            </div>
-
-                        </section>
-
-
-
-                        <!-- =================================================
-                             STEP 5 — PROJECTS
-                             ================================================= -->
-
-                        <section id="step5"
-                                 class="resume-step ">
-
-                            <div class="c2j-feature-number">
-                                STEP 05
-                            </div>
-
-                            <h2 style="
-                                font-size:30px;
-                                margin:8px 0 8px;
-                            ">
-                                Show us what you can build or do.
-                            </h2>
-
-                            <p class="c2j-muted"
-                               style="
-                                    line-height:1.7;
-                                    margin:0 0 22px;
-                               ">
-                                Projects aren't only for programmers.
-                                Add academic work, freelance work, research,
-                                business work, practical assignments or anything
-                                that demonstrates your ability.
-                            </p>
-
-
-                            <div style="
-                                padding:15px 16px;
-                                background:var(--c2j-soft);
-                                border-left:3px solid var(--c2j-accent);
-                                margin-bottom:22px;
-                            ">
-
-                                <strong style="font-size:13px;">
-                                    This entire section is optional.
-                                </strong>
-
-                                <p class="c2j-muted"
-                                   style="
-                                        font-size:12px;
-                                        line-height:1.6;
-                                        margin:5px 0 0;
-                                   ">
-                                    Skip it if you don't have relevant projects or
-                                    work highlights. Don't add something just to fill space.
-                                </p>
-
-                            </div>
-
-
-                            <div style="
-                                display:grid;
-                                gap:20px;
-                            ">
-
-                                <div>
-
-                                    <label for="projectName"
-                                           class="c2j-label">
-                                        Project / Work name
-                                    </label>
-
-                                    <input
-                                            id="projectName"
-                                            type="text"
-                                            class="c2j-input"
-                                            placeholder="e.g. Inventory Management System">
-
-                                </div>
-
-
-                                <div>
-
-                                    <label for="projectDescription"
-                                           class="c2j-label">
-                                        What did you make or work on?
-                                    </label>
-
-                                    <textarea
-                                            id="projectDescription"
-                                            class="c2j-input"
-                                            rows="6"
-                                            placeholder="English example:
-Built a web application that helps a local shop manage products and monitor inventory.
-
-Hinglish example:
-Ek local shop ke liye web application banayi jo products manage karne aur inventory track karne me help karti hai."></textarea>
-
-                                </div>
-
-
-                                <div>
-
-                                    <label for="projectContribution"
-                                           class="c2j-label">
-                                        What was your contribution?
-                                    </label>
-
-                                    <textarea
-                                            id="projectContribution"
-                                            class="c2j-input"
-                                            rows="5"
-                                            placeholder="English example:
-I designed the backend, created REST APIs and connected the application with MySQL.
-
-Hinglish example:
-Maine backend design kiya, REST APIs banayi aur application ko MySQL ke saath connect kiya."></textarea>
-
-                                </div>
-
-
-                                <div>
-
-                                    <label for="projectTechnologies"
-                                           class="c2j-label">
-                                        Technologies / tools / methods
-                                    </label>
-
-                                    <input
-                                            id="projectTechnologies"
-                                            type="text"
-                                            class="c2j-input"
-                                            placeholder="e.g. Java, Spring Boot, MySQL, Excel, Figma">
-
-                                </div>
-
-
-                                <div>
-
-                                    <label for="projectOutcome"
-                                           class="c2j-label">
-                                        Outcome
-                                    </label>
-
-                                    <textarea
-                                            id="projectOutcome"
-                                            class="c2j-input"
-                                            rows="4"
-                                            placeholder="English example:
-The system reduced the need for manual inventory records.
-
-Hinglish example:
-Isse manual inventory maintain karne ka kaam kam ho gaya."></textarea>
-
-                                    <p class="c2j-muted"
-                                       style="
-                                            font-size:12px;
-                                            line-height:1.5;
-                                            margin:7px 0 0;
-                                       ">
-                                        Optional — include a genuine outcome if you have one.
-                                    </p>
-
-                                </div>
-
-
-                                <div style="
-                                    display:grid;
-                                    grid-template-columns:1fr 1fr;
-                                    gap:16px;
-                                ">
-
-                                    <div>
-
-                                        <label for="projectUrl"
-                                               class="c2j-label">
-                                            Live project URL
-                                        </label>
-
-                                        <input
-                                                id="projectUrl"
-                                                type="url"
-                                                class="c2j-input"
-                                                placeholder="https://example.com">
-
-                                        <p class="c2j-muted"
-                                           style="
-                                                font-size:11px;
-                                                margin:5px 0 0;
-                                           ">
-                                            Optional
-                                        </p>
-
-                                    </div>
-
-
-                                    <div>
-
-                                        <label for="projectGithub"
-                                               class="c2j-label">
-                                            Repository URL
-                                        </label>
-
-                                        <input
-                                                id="projectGithub"
-                                                type="url"
-                                                class="c2j-input"
-                                                placeholder="https://github.com/username/project">
-
-                                        <p class="c2j-muted"
-                                           style="
-                                                font-size:11px;
-                                                margin:5px 0 0;
-                                           ">
-                                            Optional
-                                        </p>
-
-                                    </div>
-
-                                </div>
-
-
-                                <div style="
-                                    display:flex;
-                                    justify-content:space-between;
-                                    margin-top:8px;
-                                ">
-
-                                    <button
-                                            type="button"
-                                            id="backToExperience"
-                                            class="c2j-secondary-btn">
-                                        ← Back
-                                    </button>
-
-
-                                    <button
-                                            type="button"
-                                            id="nextToSkills"
-                                            class="c2j-primary-btn">
-                                        Continue to Skills →
-                                    </button>
-
-                                </div>
-
-                            </div>
-
-                        </section>
-
-
-
-                        <!-- =================================================
-                             STEP 6 — SKILLS
-                             ================================================= -->
-
-                        <section id="step6"
-                                 class="resume-step ">
-
-                            <div class="c2j-feature-number">
-                                STEP 06
-                            </div>
-
-                            <h2 style="
-                                font-size:30px;
-                                margin:8px 0 8px;
-                            ">
-                                What are you good at?
-                            </h2>
-
-                            <p class="c2j-muted"
-                               style="
-                                    line-height:1.7;
-                                    margin:0 0 28px;
-                               ">
-                                Add the skills that are genuinely relevant
-                                to the jobs you want.
-                            </p>
-
-
-                            <div style="
-                                display:grid;
-                                gap:20px;
-                            ">
-
-                                <div>
-
-                                    <label for="technicalSkills"
-                                           class="c2j-label">
-                                        Technical / Domain Skills
-                                    </label>
-
-                                    <textarea
-                                            id="technicalSkills"
-                                            class="c2j-input"
-                                            rows="4"
-                                            placeholder="English example:
-Java, Spring Boot, REST APIs, SQL, Database Design
-
-Hinglish example:
-Java, Spring Boot, REST API banana, SQL aur database design"></textarea>
-
-                                </div>
-
-
-                                <div>
-
-                                    <label for="toolsSkills"
-                                           class="c2j-label">
-                                        Tools / Software
-                                    </label>
-
-                                    <textarea
-                                            id="toolsSkills"
-                                            class="c2j-input"
-                                            rows="3"
-                                            placeholder="e.g. Git, GitHub, Excel, SAP, AutoCAD, Figma">
-
-                                    </textarea>
-
-                                </div>
-
-
-                                <div>
-
-                                    <label for="softSkills"
-                                           class="c2j-label">
-                                        Professional / Soft Skills
-                                    </label>
-
-                                    <textarea
-                                            id="softSkills"
-                                            class="c2j-input"
-                                            rows="3"
-                                            placeholder="e.g. Communication, Problem Solving, Team Collaboration, Leadership">
-
-                                    </textarea>
-
-                                </div>
-
-
-                                <div>
-
-                                    <label for="languages"
-                                           class="c2j-label">
-                                        Languages
-                                    </label>
-
-                                    <input
-                                            id="languages"
-                                            type="text"
-                                            class="c2j-input"
-                                            placeholder="e.g. English, Hindi">
-
-                                    <p class="c2j-muted"
-                                       style="
-                                            font-size:12px;
-                                            margin:6px 0 0;
-                                       ">
-                                        Optional
-                                    </p>
-
-                                </div>
-
-
-                                <div>
-
-                                    <label for="certifications"
-                                           class="c2j-label">
-                                        Certifications / Courses
-                                    </label>
-
-                                    <textarea
-                                            id="certifications"
-                                            class="c2j-input"
-                                            rows="4"
-                                            placeholder="English example:
-Java Programming Certification — XYZ Institute
-
-Hinglish example:
-Java programming ka certification XYZ Institute se kiya hai."></textarea>
-
-                                    <p class="c2j-muted"
-                                       style="
-                                            font-size:12px;
-                                            margin:6px 0 0;
-                                       ">
-                                        Optional — include relevant certifications only.
-                                    </p>
-
-                                </div>
-
-
-                                <div>
-
-                                    <label for="achievements"
-                                           class="c2j-label">
-                                        Achievements / Awards
-                                    </label>
-
-                                    <textarea
-                                            id="achievements"
-                                            class="c2j-input"
-                                            rows="4"
-                                            placeholder="Optional — mention genuine academic, professional, competition or other achievements."></textarea>
-
-                                </div>
-
-
-                                <div>
-
-                                    <label for="additionalInformation"
-                                           class="c2j-label">
-                                        Anything else worth mentioning?
-                                    </label>
-
-                                    <textarea
-                                            id="additionalInformation"
-                                            class="c2j-input"
-                                            rows="4"
-                                            placeholder="Optional — add relevant information that does not fit into the sections above."></textarea>
-
-                                </div>
-
-
-                                <!-- =================================================
-                                     FINAL REVIEW MESSAGE
-                                     ================================================= -->
-
-                                <div style="
-                                    margin-top:8px;
-                                    padding:20px;
-                                    background:#fbfaf7;
-                                    border:1px solid var(--c2j-line);
-                                ">
-
-                                    <div style="
-                                        display:flex;
-                                        align-items:flex-start;
-                                        gap:12px;
-                                    ">
-
-                                        <div style="
-                                            width:30px;
-                                            height:30px;
-                                            flex-shrink:0;
-                                            border:1px solid var(--c2j-line);
-                                            display:flex;
-                                            align-items:center;
-                                            justify-content:center;
-                                            font-size:13px;
-                                            font-weight:800;
-                                        ">
-                                            ✓
                                         </div>
 
 
                                         <div>
 
-                                            <strong style="font-size:14px;">
+                                            <label for="phone"
+                                                   class="c2j-label">
+                                                Phone
+                                                <span class="required-mark">*</span>
+                                            </label>
+
+                                            <input
+                                                    id="phone"
+                                                    type="tel"
+                                                    class="c2j-input"
+                                                    placeholder="+91 9876543210">
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <div>
+
+                                        <label for="location"
+                                               class="c2j-label">
+                                            Current location
+                                            <span class="required-mark">*</span>
+                                        </label>
+
+                                        <input
+                                                id="location"
+                                                type="text"
+                                                class="c2j-input"
+                                                placeholder="e.g. Saharanpur, India">
+
+                                    </div>
+
+
+                                    <div>
+
+                                        <div class="resume-field-intro">
+
+                                            <label class="c2j-label">
+                                                Professional profiles
+                                            </label>
+
+                                            <p class="c2j-muted">
+                                                Optional — add only the profiles
+                                                you actually use.
+                                            </p>
+
+                                        </div>
+
+
+                                        <div class="resume-form-grid-small">
+
+                                            <input
+                                                    id="linkedin"
+                                                    type="url"
+                                                    class="c2j-input"
+                                                    placeholder="https://www.linkedin.com/in/priyanshu-s47">
+
+                                            <input
+                                                    id="github"
+                                                    type="url"
+                                                    class="c2j-input"
+                                                    placeholder="https://github.com/priyanshu-s47">
+
+                                            <input
+                                                    id="portfolio"
+                                                    type="url"
+                                                    class="c2j-input"
+                                                    placeholder="Portfolio / personal website URL">
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="resume-step-actions end">
+
+                                        <button
+                                                type="button"
+                                                id="nextToCareer"
+                                                class="c2j-primary-btn">
+                                            Continue to Career →
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+                            </section>
+
+
+                            <!-- =================================================
+                                 STEP 2 — CAREER
+                                 ================================================= -->
+
+                            <section id="step2"
+                                     class="resume-step">
+
+                                <div class="c2j-feature-number">
+                                    STEP 02
+                                </div>
+
+                                <h2 class="resume-step-title">
+                                    Where are you heading?
+                                </h2>
+
+                                <p class="c2j-muted resume-step-description">
+                                    Tell us what kind of opportunity you're
+                                    targeting. This helps shape the resume
+                                    around your career direction.
+                                </p>
+
+
+                                <div class="resume-form-grid">
+
+                                    <div>
+
+                                        <label class="c2j-label">
+                                            Which describes you?
+                                            <span class="required-mark">*</span>
+                                        </label>
+
+
+                                        <div class="career-options-grid">
+
+                                            <label class="career-option">
+
+                                                <input
+                                                        type="radio"
+                                                        name="careerType"
+                                                        value="FRESHER">
+
+                                                <span>
+                                                    <strong>Fresher / Student</strong>
+                                                    <small>Starting your career</small>
+                                                </span>
+
+                                            </label>
+
+
+                                            <label class="career-option">
+
+                                                <input
+                                                        type="radio"
+                                                        name="careerType"
+                                                        value="EXPERIENCED">
+
+                                                <span>
+                                                    <strong>Experienced</strong>
+                                                    <small>Already working professionally</small>
+                                                </span>
+
+                                            </label>
+
+
+                                            <label class="career-option">
+
+                                                <input
+                                                        type="radio"
+                                                        name="careerType"
+                                                        value="CAREER_SWITCHER">
+
+                                                <span>
+                                                    <strong>Career Switcher</strong>
+                                                    <small>Moving to another field</small>
+                                                </span>
+
+                                            </label>
+
+
+                                            <label class="career-option">
+
+                                                <input
+                                                        type="radio"
+                                                        name="careerType"
+                                                        value="FREELANCER">
+
+                                                <span>
+                                                    <strong>Freelancer / Consultant</strong>
+                                                    <small>Independent or client work</small>
+                                                </span>
+
+                                            </label>
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <div>
+
+                                        <label for="targetRole"
+                                               class="c2j-label">
+                                            Target job role
+                                            <span class="required-mark">*</span>
+                                        </label>
+
+                                        <input
+                                                id="targetRole"
+                                                type="text"
+                                                class="c2j-input"
+                                                placeholder="e.g. Java Backend Developer">
+
+                                    </div>
+
+
+                                    <div>
+
+                                        <label for="industry"
+                                               class="c2j-label">
+                                            Domain / industry
+                                            <span class="required-mark">*</span>
+                                        </label>
+
+                                        <input
+                                                id="industry"
+                                                type="text"
+                                                class="c2j-input"
+                                                placeholder="e.g. Software Development, Banking, Pharma, Education">
+
+                                    </div>
+
+
+                                    <div>
+
+                                        <label for="totalExperience"
+                                               class="c2j-label">
+                                            Total professional experience
+                                        </label>
+
+                                        <input
+                                                id="totalExperience"
+                                                type="text"
+                                                class="c2j-input"
+                                                placeholder="e.g. 2 years 6 months">
+
+                                        <p class="c2j-muted resume-help-text">
+                                            Optional — leave blank if you're a fresher.
+                                        </p>
+
+                                    </div>
+
+
+                                    <div>
+
+                                        <label for="careerContext"
+                                               class="c2j-label">
+                                            Anything important about your career path?
+                                        </label>
+
+                                        <textarea
+                                                id="careerContext"
+                                                class="c2j-input"
+                                                rows="4"
+                                                placeholder="English example:
+I am transitioning from customer support into software development and have been building Java applications independently.
+
+Hinglish example:
+Main customer support se software development me shift kar raha hoon aur side me Java applications bana raha hoon."></textarea>
+
+                                        <p class="c2j-muted resume-help-text">
+                                            Optional — don't write a formal summary.
+                                            Just give context if your career path needs explanation.
+                                        </p>
+
+                                    </div>
+
+
+                                    <div class="resume-step-actions">
+
+                                        <button
+                                                type="button"
+                                                id="backToPersonal"
+                                                class="c2j-secondary-btn">
+                                            ← Back
+                                        </button>
+
+                                        <button
+                                                type="button"
+                                                id="nextToEducation"
+                                                class="c2j-primary-btn">
+                                            Continue to Education →
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+                            </section>
+
+
+                            <!-- =================================================
+                                 STEP 3 — EDUCATION
+                                 ================================================= -->
+
+                            <section id="step3"
+                                     class="resume-step">
+
+                                <div class="c2j-feature-number">
+                                    STEP 03
+                                </div>
+
+                                <h2 class="resume-step-title">
+                                    What have you studied?
+                                </h2>
+
+                                <p class="c2j-muted resume-step-description">
+                                    Add your most relevant academic qualification.
+                                    <strong>This section is optional.</strong>
+                                </p>
+
+
+                                <div class="resume-optional-banner">
+                                    <strong>You can skip this section.</strong>
+
+                                    <span>
+                                        Continue without education details if they
+                                        aren't relevant to your current application.
+                                    </span>
+                                </div>
+
+
+                                <div class="resume-form-grid">
+
+                                    <div>
+
+                                        <label for="degree"
+                                               class="c2j-label">
+                                            Degree / Qualification
+                                        </label>
+
+                                        <input
+                                                id="degree"
+                                                type="text"
+                                                class="c2j-input"
+                                                placeholder="e.g. Master of Computer Applications">
+
+                                    </div>
+
+
+                                    <div>
+
+                                        <label for="institution"
+                                               class="c2j-label">
+                                            College / University / Institution
+                                        </label>
+
+                                        <input
+                                                id="institution"
+                                                type="text"
+                                                class="c2j-input"
+                                                placeholder="e.g. XYZ University">
+
+                                    </div>
+
+
+                                    <div>
+
+                                        <label for="specialization"
+                                               class="c2j-label">
+                                            Field / Specialization
+                                        </label>
+
+                                        <input
+                                                id="specialization"
+                                                type="text"
+                                                class="c2j-input"
+                                                placeholder="e.g. Computer Applications">
+
+                                    </div>
+
+
+                                    <div class="resume-two-column">
+
+                                        <div>
+
+                                            <label for="educationStartYear"
+                                                   class="c2j-label">
+                                                Start year
+                                            </label>
+
+                                            <input
+                                                    id="educationStartYear"
+                                                    type="text"
+                                                    class="c2j-input"
+                                                    placeholder="e.g. 2023">
+
+                                        </div>
+
+
+                                        <div>
+
+                                            <label for="educationEndYear"
+                                                   class="c2j-label">
+                                                End year
+                                            </label>
+
+                                            <input
+                                                    id="educationEndYear"
+                                                    type="text"
+                                                    class="c2j-input"
+                                                    placeholder="e.g. 2025">
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <div>
+
+                                        <label for="educationGrade"
+                                               class="c2j-label">
+                                            CGPA / Percentage / Grade
+                                        </label>
+
+                                        <input
+                                                id="educationGrade"
+                                                type="text"
+                                                class="c2j-input"
+                                                placeholder="e.g. 8.2 CGPA">
+
+                                        <p class="c2j-muted resume-help-text">
+                                            Optional — include it only if it represents
+                                            you well and is relevant to the application.
+                                        </p>
+
+                                    </div>
+
+
+                                    <div class="resume-info-box">
+
+                                        <strong>Don't have a traditional degree?</strong>
+
+                                        <p>
+                                            That's okay. Relevant diplomas,
+                                            certifications, vocational education,
+                                            training or practical learning can also
+                                            be included.
+                                        </p>
+
+                                    </div>
+
+
+                                    <div class="resume-step-actions">
+
+                                        <button
+                                                type="button"
+                                                id="backToCareer"
+                                                class="c2j-secondary-btn">
+                                            ← Back
+                                        </button>
+
+                                        <button
+                                                type="button"
+                                                id="nextToExperience"
+                                                class="c2j-primary-btn">
+                                            Continue to Experience →
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+                            </section>
+
+
+                            <!-- =================================================
+                                 STEP 4 — EXPERIENCE
+                                 ================================================= -->
+
+                            <section id="step4"
+                                     class="resume-step">
+
+                                <div class="c2j-feature-number">
+                                    STEP 04
+                                </div>
+
+                                <h2 class="resume-step-title">
+                                    What have you actually done?
+                                </h2>
+
+                                <p class="c2j-muted resume-step-description">
+                                    Don't worry about resume language.
+                                    Tell us what you worked on and we'll structure it.
+                                </p>
+
+
+                                <div class="resume-optional-banner">
+
+                                    <strong>No professional experience?</strong>
+
+                                    <span>
+                                        Skip this section and continue.
+                                        Projects, education and skills can still
+                                        build a useful resume.
+                                    </span>
+
+                                </div>
+
+
+                                <div class="resume-form-grid">
+
+                                    <div>
+
+                                        <label for="company"
+                                               class="c2j-label">
+                                            Company / Organization
+                                        </label>
+
+                                        <input
+                                                id="company"
+                                                type="text"
+                                                class="c2j-input"
+                                                placeholder="e.g. ABC Technologies">
+
+                                    </div>
+
+
+                                    <div class="resume-two-column">
+
+                                        <div>
+
+                                            <label for="jobTitle"
+                                                   class="c2j-label">
+                                                Job title
+                                            </label>
+
+                                            <input
+                                                    id="jobTitle"
+                                                    type="text"
+                                                    class="c2j-input"
+                                                    placeholder="e.g. Software Developer">
+
+                                        </div>
+
+
+                                        <div>
+
+                                            <label for="jobLocation"
+                                                   class="c2j-label">
+                                                Work location
+                                            </label>
+
+                                            <input
+                                                    id="jobLocation"
+                                                    type="text"
+                                                    class="c2j-input"
+                                                    placeholder="e.g. Delhi, India">
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="resume-two-column">
+
+                                        <div>
+
+                                            <label for="jobStartDate"
+                                                   class="c2j-label">
+                                                Start date
+                                            </label>
+
+                                            <input
+                                                    id="jobStartDate"
+                                                    type="text"
+                                                    class="c2j-input"
+                                                    placeholder="e.g. June 2024">
+
+                                        </div>
+
+
+                                        <div>
+
+                                            <label for="jobEndDate"
+                                                   class="c2j-label">
+                                                End date
+                                            </label>
+
+                                            <input
+                                                    id="jobEndDate"
+                                                    type="text"
+                                                    class="c2j-input"
+                                                    placeholder="e.g. Present">
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <div>
+
+                                        <label for="responsibilities"
+                                               class="c2j-label">
+                                            What did you do?
+                                        </label>
+
+                                        <textarea
+                                                id="responsibilities"
+                                                class="c2j-input"
+                                                rows="7"
+                                                placeholder="English example:
+Built an inventory management website for a local retail business. Managed product records and created features for tracking stock.
+
+Hinglish example:
+Maine ek local shop ke liye inventory management website banayi thi. Product records manage kiye aur stock track karne ke features banaye."></textarea>
+
+                                        <p class="c2j-muted resume-help-text">
+                                            Rough notes are welcome. You don't need to
+                                            turn them into resume bullets yourself.
+                                        </p>
+
+                                    </div>
+
+
+                                    <div>
+
+                                        <label for="experienceTools"
+                                               class="c2j-label">
+                                            Tools / technologies / software
+                                        </label>
+
+                                        <input
+                                                id="experienceTools"
+                                                type="text"
+                                                class="c2j-input"
+                                                placeholder="e.g. Java, Spring Boot, Excel, SAP, AutoCAD">
+
+                                    </div>
+
+
+                                    <div>
+
+                                        <label for="experienceResults"
+                                               class="c2j-label">
+                                            Results or improvements
+                                        </label>
+
+                                        <textarea
+                                                id="experienceResults"
+                                                class="c2j-input"
+                                                rows="5"
+                                                placeholder="English example:
+Reduced manual stock tracking work and made product records easier to maintain.
+
+Hinglish example:
+Manual stock ka kaam kam ho gaya aur product records maintain karna easier ho gaya."></textarea>
+
+                                        <p class="c2j-muted resume-help-text">
+                                            Optional — only provide genuine results or numbers.
+                                            Never add a metric just because it sounds impressive.
+                                        </p>
+
+                                    </div>
+
+
+                                    <div class="resume-step-actions">
+
+                                        <button
+                                                type="button"
+                                                id="backToEducation"
+                                                class="c2j-secondary-btn">
+                                            ← Back
+                                        </button>
+
+                                        <button
+                                                type="button"
+                                                id="nextToProjects"
+                                                class="c2j-primary-btn">
+                                            Continue to Projects →
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+                            </section>
+
+
+                            <!-- =================================================
+                                 STEP 5 — PROJECTS
+                                 ================================================= -->
+
+                            <section id="step5"
+                                     class="resume-step">
+
+                                <div class="c2j-feature-number">
+                                    STEP 05
+                                </div>
+
+                                <h2 class="resume-step-title">
+                                    Show us what you can build or do.
+                                </h2>
+
+                                <p class="c2j-muted resume-step-description">
+                                    Projects aren't only for programmers.
+                                    Add academic work, freelance work, research,
+                                    business work, practical assignments or anything
+                                    that demonstrates your ability.
+                                </p>
+
+
+                                <div class="resume-optional-banner">
+
+                                    <strong>This entire section is optional.</strong>
+
+                                    <span>
+                                        Skip it if you don't have relevant projects
+                                        or work highlights. Don't add something just
+                                        to fill space.
+                                    </span>
+
+                                </div>
+
+
+                                <div class="resume-form-grid">
+
+                                    <div>
+
+                                        <label for="projectName"
+                                               class="c2j-label">
+                                            Project / Work name
+                                        </label>
+
+                                        <input
+                                                id="projectName"
+                                                type="text"
+                                                class="c2j-input"
+                                                placeholder="e.g. Inventory Management System">
+
+                                    </div>
+
+
+                                    <div>
+
+                                        <label for="projectDescription"
+                                               class="c2j-label">
+                                            What did you make or work on?
+                                        </label>
+
+                                        <textarea
+                                                id="projectDescription"
+                                                class="c2j-input"
+                                                rows="6"
+                                                placeholder="English example:
+Built a web application that helps a local shop manage products and monitor inventory.
+
+Hinglish example:
+Ek local shop ke liye web application banayi jo products manage karne aur inventory track karne me help karti hai."></textarea>
+
+                                    </div>
+
+
+                                    <div>
+
+                                        <label for="projectContribution"
+                                               class="c2j-label">
+                                            What was your contribution?
+                                        </label>
+
+                                        <textarea
+                                                id="projectContribution"
+                                                class="c2j-input"
+                                                rows="5"
+                                                placeholder="English example:
+I designed the backend, created REST APIs and connected the application with MySQL.
+
+Hinglish example:
+Maine backend design kiya, REST APIs banayi aur application ko MySQL ke saath connect kiya."></textarea>
+
+                                    </div>
+
+
+                                    <div>
+
+                                        <label for="projectTechnologies"
+                                               class="c2j-label">
+                                            Technologies / tools / methods
+                                        </label>
+
+                                        <input
+                                                id="projectTechnologies"
+                                                type="text"
+                                                class="c2j-input"
+                                                placeholder="e.g. Java, Spring Boot, MySQL, Excel, Figma">
+
+                                    </div>
+
+
+                                    <div>
+
+                                        <label for="projectOutcome"
+                                               class="c2j-label">
+                                            Outcome
+                                        </label>
+
+                                        <textarea
+                                                id="projectOutcome"
+                                                class="c2j-input"
+                                                rows="4"
+                                                placeholder="English example:
+The system reduced the need for manual inventory records.
+
+Hinglish example:
+Isse manual inventory maintain karne ka kaam kam ho gaya."></textarea>
+
+                                        <p class="c2j-muted resume-help-text">
+                                            Optional — include a genuine outcome if you have one.
+                                        </p>
+
+                                    </div>
+
+
+                                    <div class="resume-two-column">
+
+                                        <div>
+
+                                            <label for="projectUrl"
+                                                   class="c2j-label">
+                                                Live project URL
+                                            </label>
+
+                                            <input
+                                                    id="projectUrl"
+                                                    type="url"
+                                                    class="c2j-input"
+                                                    placeholder="https://example.com">
+
+                                            <p class="c2j-muted resume-help-text">
+                                                Optional
+                                            </p>
+
+                                        </div>
+
+
+                                        <div>
+
+                                            <label for="projectGithub"
+                                                   class="c2j-label">
+                                                Repository URL
+                                            </label>
+
+                                            <input
+                                                    id="projectGithub"
+                                                    type="url"
+                                                    class="c2j-input"
+                                                    placeholder="https://github.com/username/project">
+
+                                            <p class="c2j-muted resume-help-text">
+                                                Optional
+                                            </p>
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="resume-step-actions">
+
+                                        <button
+                                                type="button"
+                                                id="backToExperience"
+                                                class="c2j-secondary-btn">
+                                            ← Back
+                                        </button>
+
+                                        <button
+                                                type="button"
+                                                id="nextToSkills"
+                                                class="c2j-primary-btn">
+                                            Continue to Skills →
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+                            </section>
+
+
+                            <!-- =================================================
+                                 STEP 6 — SKILLS
+                                 ================================================= -->
+
+                            <section id="step6"
+                                     class="resume-step">
+
+                                <div class="c2j-feature-number">
+                                    STEP 06
+                                </div>
+
+                                <h2 class="resume-step-title">
+                                    What are you good at?
+                                </h2>
+
+                                <p class="c2j-muted resume-step-description">
+                                    Add the skills that are genuinely relevant
+                                    to the jobs you want.
+                                </p>
+
+
+                                <div class="resume-optional-banner">
+
+                                    <strong>You can leave optional fields blank.</strong>
+
+                                    <span>
+                                        Add only skills, certifications and achievements
+                                        you can genuinely support.
+                                    </span>
+
+                                </div>
+
+
+                                <div class="resume-form-grid">
+
+                                    <div>
+
+                                        <label for="technicalSkills"
+                                               class="c2j-label">
+                                            Technical / Domain Skills
+                                        </label>
+
+                                        <textarea
+                                                id="technicalSkills"
+                                                class="c2j-input"
+                                                placeholder="English example:
+Java, Spring Boot, REST APIs, SQL, Database Design, Data Analysis, Documentation, PPIC Planning, etc"></textarea>
+
+                                    </div>
+
+
+                                    <div>
+
+                                        <label for="toolsSkills"
+                                               class="c2j-label">
+                                            Tools / Software
+                                        </label>
+
+                                        <textarea
+                                                id="toolsSkills"
+                                                class="c2j-input"
+                                                placeholder="e.g. Git, GitHub, Excel, SAP, Tally, AutoCAD, Figma, Postman, etc"></textarea>
+
+                                    </div>
+
+
+                                    <div>
+
+                                        <label for="softSkills"
+                                               class="c2j-label">
+                                            Professional / Soft Skills
+                                        </label>
+
+                                        <textarea
+                                                id="softSkills"
+                                                class="c2j-input"
+                                                rows="3"
+                                                placeholder="e.g. Communication, Problem Solving, Team Collaboration, Leadership"></textarea>
+
+                                    </div>
+
+
+                                    <div>
+
+                                        <label for="languages"
+                                               class="c2j-label">
+                                            Languages
+                                        </label>
+
+                                        <input
+                                                id="languages"
+                                                type="text"
+                                                class="c2j-input"
+                                                placeholder="e.g. English, Hindi">
+
+                                        <p class="c2j-muted resume-help-text">
+                                            Optional
+                                        </p>
+
+                                    </div>
+
+
+                                    <div>
+
+                                        <label for="certifications"
+                                               class="c2j-label">
+                                            Certifications / Courses
+                                        </label>
+
+                                        <textarea
+                                                id="certifications"
+                                                class="c2j-input"
+                                                rows="4"
+                                                placeholder="English example:
+Java Programming Certification — XYZ Institute
+
+Hinglish example:
+Java programming ka certification XYZ Institute se kiya hai."></textarea>
+
+                                        <p class="c2j-muted resume-help-text">
+                                            Optional — include relevant certifications only.
+                                        </p>
+
+                                    </div>
+
+
+                                    <div>
+
+                                        <label for="achievements"
+                                               class="c2j-label">
+                                            Achievements / Awards
+                                        </label>
+
+                                        <textarea
+                                                id="achievements"
+                                                class="c2j-input"
+                                                rows="4"
+                                                placeholder="Optional — mention genuine academic, professional, competition or other achievements."></textarea>
+
+                                    </div>
+
+
+                                    <div>
+
+                                        <label for="additionalInformation"
+                                               class="c2j-label">
+                                            Anything else worth mentioning?
+                                        </label>
+
+                                        <textarea
+                                                id="additionalInformation"
+                                                class="c2j-input"
+                                                rows="4"
+                                                placeholder="Optional — add relevant information that does not fit into the sections above."></textarea>
+
+                                    </div>
+
+
+                                    <!-- =================================================
+                                         FINAL REVIEW MESSAGE
+                                         ================================================= -->
+
+                                    <div class="resume-promise-box">
+
+                                        <div class="resume-promise-icon">
+                                            ✓
+                                        </div>
+
+                                        <div>
+
+                                            <strong>
                                                 One important promise
                                             </strong>
 
-                                            <p class="c2j-muted"
-                                               style="
-                                                    font-size:12px;
-                                                    line-height:1.7;
-                                                    margin:6px 0 0;
-                                               ">
+                                            <p class="c2j-muted">
                                                 Code2Job can improve wording, structure and
                                                 presentation — but it should never invent a company,
                                                 job responsibility, technology, certification,
@@ -1712,155 +1351,113 @@ Java programming ka certification XYZ Institute se kiya hai."></textarea>
 
                                     </div>
 
+
+                                    <div class="resume-final-note">
+
+                                        <span>
+                                            Almost there. Your information is ready
+                                            for the AI writing stage.
+                                        </span>
+
+                                        <strong>
+                                            Usually takes a little while.
+                                        </strong>
+
+                                    </div>
+
+
+                                    <div class="resume-step-actions">
+
+                                        <button
+                                                type="button"
+                                                id="backToProjects"
+                                                class="c2j-secondary-btn">
+                                            ← Back
+                                        </button>
+
+                                        <button
+                                                type="button"
+                                                id="generateResume"
+                                                class="c2j-primary-btn">
+
+                                            Review & Generate Resume →
+
+                                        </button>
+
+                                    </div>
+
                                 </div>
 
-
-                                <div style="
-                                    display:flex;
-                                    justify-content:space-between;
-                                    align-items:center;
-                                    gap:15px;
-                                    margin-top:8px;
-                                ">
-
-                                    <button
-                                            type="button"
-                                            id="backToProjects"
-                                            class="c2j-secondary-btn">
-                                        ← Back
-                                    </button>
+                            </section>
 
 
-                                    <button
-                                            type="button"
-                                            id="generateResume"
-                                            class="c2j-primary-btn">
-
-                                        Review & Generate Resume →
-
-                                    </button>
-
-                                </div>
-
-                            </div>
-
-                        </section>
-
+                        </div>
 
                     </div>
-
 
 
                     <!-- =================================================
                          RIGHT SIDEBAR
                          ================================================= -->
 
-                    <aside style="
-                        position:sticky;
-                        top:24px;
-                    ">
+                    <aside class="resume-sidebar">
 
 
                         <!-- =================================================
-                             WHY THIS BUILDER
+                             WHY CODE2JOB
                              ================================================= -->
 
-                        <div class="c2j-card"
-                             style="
-                                padding:22px;
-                             ">
+                        <div class="c2j-card resume-sidebar-card">
 
                             <div class="c2j-feature-number">
                                 WHY CODE2JOB?
                             </div>
 
-                            <h3 style="
-                                font-size:19px;
-                                margin:8px 0 16px;
-                            ">
+                            <h3>
                                 Less resume writing.
                                 More useful information.
                             </h3>
 
 
-                            <div style="
-                                display:grid;
-                                gap:17px;
-                            ">
+                            <div class="resume-sidebar-points">
 
                                 <div>
+                                    <strong>Write like a human</strong>
 
-                                    <strong style="font-size:13px;">
-                                        Write like a human
-                                    </strong>
-
-                                    <p class="c2j-muted"
-                                       style="
-                                            font-size:12px;
-                                            line-height:1.6;
-                                            margin:4px 0 0;
-                                       ">
-                                        You can explain your work normally instead
+                                    <p class="c2j-muted">
+                                        Explain your work normally instead
                                         of trying to sound like a resume writer.
                                     </p>
-
                                 </div>
 
 
                                 <div>
+                                    <strong>Built around your facts</strong>
 
-                                    <strong style="font-size:13px;">
-                                        Built around your facts
-                                    </strong>
-
-                                    <p class="c2j-muted"
-                                       style="
-                                            font-size:12px;
-                                            line-height:1.6;
-                                            margin:4px 0 0;
-                                       ">
+                                    <p class="c2j-muted">
                                         The goal is better presentation of your
                                         actual experience, not fictional achievements.
                                     </p>
-
                                 </div>
 
 
                                 <div>
+                                    <strong>Any career domain</strong>
 
-                                    <strong style="font-size:13px;">
-                                        Any career domain
-                                    </strong>
-
-                                    <p class="c2j-muted"
-                                       style="
-                                            font-size:12px;
-                                            line-height:1.6;
-                                            margin:4px 0 0;
-                                       ">
+                                    <p class="c2j-muted">
                                         Software, business, teaching, pharma,
                                         manufacturing, finance or another field.
                                     </p>
-
                                 </div>
 
 
                                 <div>
+                                    <strong>Optional means optional</strong>
 
-                                    <strong style="font-size:13px;">
-                                        Optional means optional
-                                    </strong>
-
-                                    <p class="c2j-muted"
-                                       style="
-                                            font-size:12px;
-                                            line-height:1.6;
-                                            margin:4px 0 0;
-                                       ">
+                                    <p class="c2j-muted">
                                         No forcing users to invent content just
                                         to complete a long form.
                                     </p>
-
                                 </div>
 
                             </div>
@@ -1868,36 +1465,22 @@ Java programming ka certification XYZ Institute se kiya hai."></textarea>
                         </div>
 
 
-
                         <!-- =================================================
-                             DIFFERENT FROM TYPICAL RESUME BUILDERS
+                             OUR APPROACH
                              ================================================= -->
 
-                        <div class="c2j-card"
-                             style="
-                                padding:22px;
-                                margin-top:14px;
-                             ">
+                        <div class="c2j-card resume-sidebar-card">
 
                             <div class="c2j-feature-number">
                                 OUR APPROACH
                             </div>
 
-                            <h3 style="
-                                font-size:18px;
-                                margin:8px 0 14px;
-                            ">
+                            <h3>
                                 What's different?
                             </h3>
 
 
-                            <ul style="
-                                margin:0;
-                                padding-left:17px;
-                                color:var(--c2j-muted);
-                                font-size:12px;
-                                line-height:1.75;
-                             ">
+                            <ul>
 
                                 <li>
                                     You don't need to write polished bullets.
@@ -1912,11 +1495,11 @@ Java programming ka certification XYZ Institute se kiya hai."></textarea>
                                 </li>
 
                                 <li>
-                                    Projects are not limited to software development.
+                                    Projects aren't limited to software development.
                                 </li>
 
                                 <li>
-                                    Resume content should remain grounded in your input.
+                                    Resume content stays grounded in your input.
                                 </li>
 
                             </ul>
@@ -1924,26 +1507,21 @@ Java programming ka certification XYZ Institute se kiya hai."></textarea>
                         </div>
 
 
-
                         <!-- =================================================
                              MINI TIP
                              ================================================= -->
 
-                        <div style="
-                            padding:18px 2px 0;
-                        ">
+                        <div class="resume-sidebar-tip">
 
-                            <p class="c2j-muted"
-                               style="
-                                    font-size:11px;
-                                    line-height:1.7;
-                                    margin:0;
-                               ">
-                                <strong style="color:var(--c2j-ink);">
+                            <p class="c2j-muted">
+
+                                <strong>
                                     Tip:
                                 </strong>
+
                                 Don't try to make your answers impressive.
-                                Make them accurate. The builder can work on the wording later.
+                                Make them accurate. The builder handles the wording later.
+
                             </p>
 
                         </div>
@@ -1959,24 +1537,13 @@ Java programming ka certification XYZ Institute se kiya hai."></textarea>
     </main>
 
 
-
     <!-- =========================================================
          FOOTER
          ========================================================= -->
 
-    <footer style="
-        border-top:1px solid var(--c2j-line);
-        padding:30px 0;
-    ">
+    <footer class="c2j-footer">
 
-        <div class="c2j-container"
-             style="
-                display:flex;
-                justify-content:space-between;
-                align-items:center;
-                gap:20px;
-                flex-wrap:wrap;
-             ">
+        <div class="c2j-container c2j-footer-inner">
 
             <div>
 
@@ -1985,21 +1552,14 @@ Java programming ka certification XYZ Institute se kiya hai."></textarea>
                     Code<span>2</span>Job
                 </a>
 
-                <p class="c2j-muted"
-                   style="
-                        font-size:12px;
-                        margin:7px 0 0;
-                   ">
+                <p class="c2j-muted">
                     Career tools built around your real information.
                 </p>
 
             </div>
 
 
-            <div style="
-                display:flex;
-                gap:18px;
-            ">
+            <div class="c2j-footer-links">
 
                 <a href="/sanitizer"
                    class="c2j-nav-link">
@@ -2020,12 +1580,12 @@ Java programming ka certification XYZ Institute se kiya hai."></textarea>
 </div>
 
 
-
 <!-- =============================================================
      JAVASCRIPT
      ============================================================= -->
 
-<script th:src="@{/js/app.js}"></script>
+<script th:src="@{/js/resume.js}"></script>
+
 
 </body>
 

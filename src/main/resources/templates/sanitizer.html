@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en"
       xmlns:th="http://www.thymeleaf.org">
@@ -11,69 +10,124 @@
           content="width=device-width, initial-scale=1.0">
 
     <title>
-        Java Spring Boot Code Sanitizer | Code2Job
+        Java Code Review Tool | Spring Boot Security & Performance Analyzer | Code2Job
     </title>
 
     <meta name="description"
-          content="Review Java and Spring Boot code for security and performance issues, then turn genuine implementation details into resume-ready impact statements.">
+          content="Review Java and Spring Boot code for security, performance, code quality and implementation concerns. Get practical feedback and evidence-based resume insights with Code2Job.">
 
     <meta name="keywords"
-          content="Java code sanitizer, Spring Boot code review, Java security review, Spring Boot security, Java performance review, developer resume bullets">
+          content="Java code review tool, Java code analyzer, Java security review, Spring Boot code review, Spring Boot security analyzer, Java performance analyzer, Java code sanitizer, developer code review, Java developer tools, Spring Boot developer tools">
 
     <meta name="robots"
           content="index, follow">
 
+    <meta name="author"
+          content="Code2Job">
+
+    <meta name="theme-color"
+          content="#111820">
+
     <link rel="canonical"
           href="https://code2job.com/sanitizer">
 
+
+    <!-- Open Graph -->
+
     <meta property="og:title"
-          content="Java Spring Boot Code Sanitizer | Code2Job">
+          content="Java Code Review Tool | Code2Job">
 
     <meta property="og:description"
-          content="Paste Java or Spring Boot code to identify security and performance concerns and generate resume-ready impact statements.">
+          content="Paste Java or Spring Boot code and get practical security, performance and implementation feedback.">
 
     <meta property="og:type"
           content="website">
 
+    <meta property="og:url"
+          content="https://code2job.com/sanitizer">
+
+    <meta property="og:site_name"
+          content="Code2Job">
+
+
+    <!-- Styles -->
+
     <link rel="stylesheet"
           th:href="@{/css/app.css}">
 
+    <link rel="stylesheet"
+          th:href="@{/css/sanitizer.css}">
+
+
+    <!-- Tailwind is retained for existing shared utility classes -->
+
     <script src="https://cdn.tailwindcss.com"></script>
+
+
+    <!-- Structured Data -->
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebApplication",
+            "name": "Code2Job Java Code Review Tool",
+            "url": "https://code2job.com/sanitizer",
+            "applicationCategory": "DeveloperApplication",
+            "operatingSystem": "Web",
+            "description": "A developer-focused tool for reviewing Java and Spring Boot code for security, performance and implementation concerns.",
+            "publisher": {
+                "@type": "Organization",
+                "name": "Code2Job",
+                "url": "https://code2job.com"
+            }
+        }
+    </script>
 
 </head>
 
 
-<body>
+<body class="sanitizer-page">
 
 <div class="c2j-shell">
 
 
-    <!-- Navigation -->
+    <!-- =====================================================
+         NAVIGATION
+         ===================================================== -->
 
     <header class="c2j-nav">
 
-        <div class="c2j-container min-h-[74px] flex items-center justify-between">
+        <div class="c2j-container sanitizer-nav-inner">
 
             <a href="/"
-               class="c2j-logo">
+               class="c2j-logo"
+               aria-label="Code2Job home">
 
                 Code<span>2</span>Job
 
             </a>
 
 
-            <div class="flex items-center gap-6">
+            <nav class="sanitizer-nav-links"
+                 aria-label="Main navigation">
 
-                <span class="hidden sm:block text-sm font-semibold text-gray-500">
-                    Java / Spring Boot Sanitizer
+                <span class="sanitizer-nav-label">
+                    Developer Studio
                 </span>
 
-                <a href="/"
-                   class="c2j-nav-link">
+                <a href="/">
                     Home
                 </a>
 
-            </div>
+                <a href="/resume">
+                    Resume Builder
+                </a>
+
+                <a href="/ats">
+                    ATS Analyzer
+                </a>
+
+            </nav>
 
         </div>
 
@@ -81,108 +135,247 @@
 
 
 
-    <main class="c2j-container py-14">
+    <!-- =====================================================
+         HERO
+         ===================================================== -->
 
+    <main>
 
-        <!-- Heading -->
+        <section class="sanitizer-hero">
 
-        <section class="max-w-3xl">
+            <div class="sanitizer-hero-inner">
 
-            <div class="c2j-eyebrow">
-                Developer Tool
-            </div>
+                <div class="sanitizer-eyebrow">
 
-            <h1 class="mt-5 text-4xl md:text-5xl font-extrabold leading-tight">
+                    <span class="sanitizer-eyebrow-dot"></span>
 
-                Paste the code.
-                <span class="text-[#c96b3b]">
-                    Find the problems.
-                </span>
-
-            </h1>
-
-            <p class="mt-5 text-lg text-gray-500 leading-8">
-
-                Review Java and Spring Boot code for practical
-                security and performance concerns, then extract
-                genuine implementation details that can become
-                stronger resume statements.
-
-            </p>
-
-        </section>
-
-
-        <div class="mt-8 c2j-trust-strip">
-
-            <span class="c2j-trust-item">
-                <span class="c2j-status-dot"></span>
-                Java focused
-            </span>
-
-            <span class="c2j-trust-item">
-                Spring Boot focused
-            </span>
-
-            <span class="c2j-trust-item">
-                Security review
-            </span>
-
-            <span class="c2j-trust-item">
-                Performance review
-            </span>
-
-            <span class="c2j-trust-item">
-                Resume impact statements
-            </span>
-
-        </div>
-
-
-
-        <!-- Workspace -->
-
-        <section class="mt-10">
-
-            <div class="c2j-card c2j-card-shadow p-6 md:p-8">
-
-                <div class="flex items-start justify-between">
-
-                    <div>
-
-                        <span class="c2j-feature-number">
-                            CODE INPUT
-                        </span>
-
-                        <h2 class="mt-2 text-2xl font-bold">
-                            Java / Spring Boot source code
-                        </h2>
-
-                    </div>
-
-                    <span class="text-xs font-bold text-gray-400">
-                        Step 01
-                    </span>
+                    Java / Spring Boot Developer Studio
 
                 </div>
 
 
-                <div class="mt-7">
+                <h1>
 
-                    <label for="codeInput"
-                           class="c2j-label">
+                    Paste the code.
+                    <span>Understand it better.</span>
 
-                        Paste your code
+                </h1>
 
-                    </label>
 
-                    <textarea id="codeInput"
-                              class="c2j-input font-mono text-sm"
-                              rows="20"
-                              spellcheck="false"
-                              placeholder="@RestController
+                <p class="sanitizer-hero-description">
+
+                    A focused code review workspace for Java and Spring Boot
+                    developers. Find practical security and performance
+                    concerns, understand the implementation, and extract
+                    genuine engineering evidence for your resume.
+
+                </p>
+
+
+                <div class="sanitizer-hero-points">
+
+                    <span>
+                        <i></i>
+                        Security
+                    </span>
+
+                    <span>
+                        <i></i>
+                        Performance
+                    </span>
+
+                    <span>
+                        <i></i>
+                        Code quality
+                    </span>
+
+                    <span>
+                        <i></i>
+                        Resume evidence
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             REVIEW STUDIO
+             ===================================================== -->
+
+        <section class="sanitizer-studio-section">
+
+            <div class="sanitizer-container">
+
+
+                <div class="sanitizer-studio">
+
+                    <!-- Studio top bar -->
+
+                    <div class="sanitizer-studio-bar">
+
+                        <div class="sanitizer-studio-brand">
+
+                            <div class="sanitizer-window-dots">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+
+                            <span>
+                                Code Review Workspace
+                            </span>
+
+                        </div>
+
+
+                        <div class="sanitizer-live-status">
+
+                            <span class="sanitizer-status-light"></span>
+
+                            Ready
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Studio intro -->
+
+                    <div class="sanitizer-studio-intro">
+
+                        <div>
+
+                            <span class="sanitizer-section-label">
+                                SOURCE REVIEW
+                            </span>
+
+                            <h2>
+                                What are you building?
+                            </h2>
+
+                            <p>
+                                Give Code2Job a meaningful piece of your
+                                implementation. Controllers, services,
+                                repositories and other backend code work well.
+                            </p>
+
+                        </div>
+
+                        <div class="sanitizer-intro-mark">
+                            JAVA
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Main workspace -->
+
+                    <div class="sanitizer-workspace-grid">
+
+
+                        <!-- =================================================
+                             CODE EDITOR
+                             ================================================= -->
+
+                        <div class="sanitizer-code-column">
+
+                            <div class="sanitizer-field-heading">
+
+                                <div>
+
+                                    <label for="codeInput">
+                                        Source code
+                                    </label>
+
+                                    <span>
+                                        Required
+                                    </span>
+
+                                </div>
+
+                                <small>
+                                    Paste implementation
+                                </small>
+
+                            </div>
+
+
+                            <div id="sanitizerCodeEditor"
+                                 class="sanitizer-code-editor">
+
+
+                                <!-- Editor header -->
+
+                                <div class="sanitizer-editor-header">
+
+                                    <div class="sanitizer-editor-file">
+
+                                        <span class="sanitizer-file-icon">
+                                            { }
+                                        </span>
+
+                                        <span>
+                                            source.java
+                                        </span>
+
+                                    </div>
+
+
+                                    <div class="sanitizer-editor-language">
+                                        Java
+                                    </div>
+
+                                </div>
+
+
+                                <!-- Editor body -->
+
+                                <div class="sanitizer-editor-body">
+
+                                    <div class="sanitizer-line-numbers"
+                                         aria-hidden="true">
+
+                                        <span>1</span>
+                                        <span>2</span>
+                                        <span>3</span>
+                                        <span>4</span>
+                                        <span>5</span>
+                                        <span>6</span>
+                                        <span>7</span>
+                                        <span>8</span>
+                                        <span>9</span>
+                                        <span>10</span>
+                                        <span>11</span>
+                                        <span>12</span>
+                                        <span>13</span>
+                                        <span>14</span>
+                                        <span>15</span>
+                                        <span>16</span>
+                                        <span>17</span>
+                                        <span>18</span>
+                                        <span>19</span>
+                                        <span>20</span>
+
+                                    </div>
+
+
+                                    <textarea id="codeInput"
+                                              spellcheck="false"
+                                              autocomplete="off"
+                                              autocorrect="off"
+                                              autocapitalize="off"
+                                              aria-label="Java or Spring Boot source code"
+                                              placeholder="@RestController
 @RequestMapping(&quot;/users&quot;)
 public class UserController {
+
+    private final UserService userService;
 
     @GetMapping
     public List&lt;User&gt; getUsers() {
@@ -190,67 +383,228 @@ public class UserController {
     }
 }"></textarea>
 
-                </div>
+                                </div>
 
 
-                <div class="mt-7 grid md:grid-cols-2 gap-5">
+                                <!-- Editor footer -->
+
+                                <div class="sanitizer-editor-footer">
+
+                                    <span>
+                                        Java / Spring Boot
+                                    </span>
+
+                                    <span id="sanitizerCharacterCount">
+                                        0 chars
+                                    </span>
+
+                                </div>
+
+                            </div>
 
 
-                    <div>
+                            <div class="sanitizer-code-note">
 
-                        <label for="codeContext"
-                               class="c2j-label">
+                                <span>
+                                    Paste only code you are comfortable sending
+                                    for analysis.
+                                </span>
 
-                            What does this code do?
-                            <span class="font-normal text-gray-400">
-                                Optional
-                            </span>
+                                <span>
+                                    Never include passwords, API keys or secrets.
+                                </span>
 
-                        </label>
+                            </div>
 
-                        <textarea id="codeContext"
-                                  class="c2j-input"
-                                  rows="5"
-                                  placeholder="Example: This controller exposes user data for an internal application."></textarea>
+                        </div>
+
+
+
+                        <!-- =================================================
+                             CONTEXT PANEL
+                             ================================================= -->
+
+                        <aside class="sanitizer-side-panel">
+
+
+                            <div class="sanitizer-context-card">
+
+                                <div class="sanitizer-context-heading">
+
+                                    <div>
+
+                                        <span class="sanitizer-section-label">
+                                            OPTIONAL CONTEXT
+                                        </span>
+
+                                        <h3>
+                                            Give it some background
+                                        </h3>
+
+                                    </div>
+
+                                    <span class="sanitizer-optional-badge">
+                                        Optional
+                                    </span>
+
+                                </div>
+
+
+                                <p class="sanitizer-context-description">
+
+                                    A little context helps the review understand
+                                    what the code is actually trying to accomplish.
+
+                                </p>
+
+
+                                <div class="sanitizer-input-group">
+
+                                    <label for="codeContext">
+                                        What does this code do?
+                                    </label>
+
+                                    <textarea id="codeContext"
+                                              rows="5"
+                                              placeholder="Example: This service handles doctor appointment booking for my Spring Boot application."></textarea>
+
+                                </div>
+
+
+                                <div class="sanitizer-input-group">
+
+                                    <label for="developerGoal">
+                                        What do you want to improve?
+                                    </label>
+
+                                    <textarea id="developerGoal"
+                                              rows="5"
+                                              placeholder="Example: I want to improve security and reduce unnecessary database calls."></textarea>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- Review checklist -->
+
+                            <div class="sanitizer-checklist-card">
+
+                                <div class="sanitizer-checklist-top">
+
+                                    <span class="sanitizer-section-label">
+                                        REVIEW LENS
+                                    </span>
+
+                                    <span class="sanitizer-small-text">
+                                        03 areas
+                                    </span>
+
+                                </div>
+
+
+                                <div class="sanitizer-check-item">
+
+                                    <div class="sanitizer-check-number">
+                                        01
+                                    </div>
+
+                                    <div>
+                                        <strong>Security</strong>
+                                        <p>
+                                            Authentication, input handling,
+                                            secrets and common risks.
+                                        </p>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="sanitizer-check-item">
+
+                                    <div class="sanitizer-check-number">
+                                        02
+                                    </div>
+
+                                    <div>
+                                        <strong>Performance</strong>
+                                        <p>
+                                            Database access, repeated work
+                                            and inefficient patterns.
+                                        </p>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="sanitizer-check-item">
+
+                                    <div class="sanitizer-check-number">
+                                        03
+                                    </div>
+
+                                    <div>
+                                        <strong>Resume evidence</strong>
+                                        <p>
+                                            Technical statements supported
+                                            by your actual implementation.
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </aside>
 
                     </div>
 
 
-                    <div>
 
-                        <label for="developerGoal"
-                               class="c2j-label">
+                    <!-- =================================================
+                         ACTION AREA
+                         ================================================= -->
 
-                            What are you trying to improve?
-                            <span class="font-normal text-gray-400">
-                                Optional
+                    <div class="sanitizer-action-area">
+
+                        <div class="sanitizer-action-copy">
+
+                            <div class="sanitizer-action-icon">
+                                →
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Ready when you are.
+                                </strong>
+
+                                <p>
+                                    Code2Job will review the implementation
+                                    and return a structured report.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <button id="sanitizeCode"
+                                type="button"
+                                class="sanitizer-review-button">
+
+                            <span class="sanitizer-button-text">
+                                Review &amp; Sanitize Code
                             </span>
 
-                        </label>
+                            <span class="sanitizer-button-arrow">
+                                →
+                            </span>
 
-                        <textarea id="developerGoal"
-                                  class="c2j-input"
-                                  rows="5"
-                                  placeholder="Example: I want the endpoint to be more secure and efficient."></textarea>
+                        </button>
 
                     </div>
-
-                </div>
-
-
-                <div class="mt-8 pt-6 border-t border-[#dfddd6]">
-
-                    <button id="sanitizeCode"
-                            type="button"
-                            class="c2j-primary-btn">
-
-                        Review & Sanitize Code
-
-                        <span class="ml-2">
-                            →
-                        </span>
-
-                    </button>
 
                 </div>
 
@@ -260,89 +614,462 @@ public class UserController {
 
 
 
-        <!-- Output -->
+        <!-- =====================================================
+             OUTPUT REPORT
+             ===================================================== -->
 
         <section id="sanitizerOutput"
-                 class="mt-8 hidden">
+                 class="sanitizer-output-section hidden"
+                 aria-labelledby="sanitizerOutputTitle">
 
-            <div class="grid lg:grid-cols-2 gap-6">
+            <div class="sanitizer-container">
 
 
-                <!-- Security -->
+                <!-- Report heading -->
 
-                <div class="c2j-card p-6">
+                <div class="sanitizer-report-heading">
 
-                    <span class="c2j-feature-number">
-                        01 / SECURITY
-                    </span>
+                    <div>
 
-                    <h2 class="mt-2 text-2xl font-bold">
-                        Code Sanitization Tips
-                    </h2>
+                        <span class="sanitizer-section-label">
+                            REVIEW COMPLETE
+                        </span>
 
-                    <div id="securityResults"
-                         class="mt-6 space-y-4">
+                        <h2 id="sanitizerOutputTitle">
+                            Your code review
+                        </h2>
+
+                        <p>
+                            A focused report based on the implementation
+                            you submitted. Review important findings against
+                            your complete application before making changes.
+                        </p>
+
+                    </div>
+
+
+                    <div class="sanitizer-report-status">
+
+                        <span></span>
+
+                        Analysis ready
+
                     </div>
 
                 </div>
 
 
-                <!-- Performance -->
 
-                <div class="c2j-card p-6">
+                <!-- =================================================
+                     FINDINGS
+                     ================================================= -->
 
-                    <span class="c2j-feature-number">
-                        02 / PERFORMANCE
-                    </span>
+                <div class="sanitizer-results-grid">
 
-                    <h2 class="mt-2 text-2xl font-bold">
-                        Performance Considerations
-                    </h2>
 
-                    <div id="performanceResults"
-                         class="mt-6 space-y-4">
+                    <!-- Security -->
+
+                    <article class="sanitizer-result-card">
+
+                        <div class="sanitizer-result-card-header">
+
+                            <div>
+
+                                <span class="sanitizer-result-number">
+                                    01
+                                </span>
+
+                                <h3>
+                                    Security review
+                                </h3>
+
+                            </div>
+
+                            <span class="sanitizer-result-type">
+                                SECURITY
+                            </span>
+
+                        </div>
+
+
+                        <p class="sanitizer-result-intro">
+                            Implementation-level security concerns worth
+                            reviewing.
+                        </p>
+
+
+                        <div id="securityResults"
+                             class="sanitizer-results-list">
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- Performance -->
+
+                    <article class="sanitizer-result-card">
+
+                        <div class="sanitizer-result-card-header">
+
+                            <div>
+
+                                <span class="sanitizer-result-number">
+                                    02
+                                </span>
+
+                                <h3>
+                                    Performance review
+                                </h3>
+
+                            </div>
+
+                            <span class="sanitizer-result-type">
+                                PERFORMANCE
+                            </span>
+
+                        </div>
+
+
+                        <p class="sanitizer-result-intro">
+                            Potentially inefficient patterns and areas
+                            worth investigating.
+                        </p>
+
+
+                        <div id="performanceResults"
+                             class="sanitizer-results-list">
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- Resume evidence -->
+
+                    <article class="sanitizer-resume-card">
+
+                        <div class="sanitizer-result-card-header">
+
+                            <div>
+
+                                <span class="sanitizer-result-number">
+                                    03
+                                </span>
+
+                                <h3>
+                                    Resume evidence
+                                </h3>
+
+                            </div>
+
+                            <span class="sanitizer-result-type">
+                                CAREER
+                            </span>
+
+                        </div>
+
+
+                        <div class="sanitizer-resume-intro">
+
+                            <div class="sanitizer-resume-mark">
+                                CV
+                            </div>
+
+                            <p>
+                                These statements are generated only from
+                                technical details supported by the submitted
+                                implementation. Review them before using them
+                                on your resume.
+                            </p>
+
+                        </div>
+
+
+                        <div id="resumeStatements"
+                             class="sanitizer-resume-list">
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     REPORT NOTE
+                     ================================================= -->
+
+                <div class="sanitizer-report-note">
+
+                    <div class="sanitizer-report-note-mark">
+                        !
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Treat the review as engineering feedback.
+                        </strong>
+
+                        <p>
+                            A code review response is not proof that a
+                            vulnerability exists or that an optimization
+                            will improve production performance. Validate
+                            important findings against your dependencies,
+                            configuration, tests and runtime environment.
+                        </p>
+
                     </div>
 
                 </div>
 
 
-                <!-- Resume -->
 
-                <div class="c2j-card p-6 lg:col-span-2">
+                <!-- =================================================
+                     AFTER REVIEW
+                     ================================================= -->
 
-                    <span class="c2j-feature-number">
-                        03 / RESUME
+                <div class="sanitizer-next-step">
+
+                    <div>
+
+                        <span class="sanitizer-section-label">
+                            NEXT STEP
+                        </span>
+
+                        <h3>
+                            Turn real engineering work into a stronger resume.
+                        </h3>
+
+                        <p>
+                            Once you understand your implementation,
+                            use the Code2Job resume builder to structure
+                            your experience and projects.
+                        </p>
+
+                    </div>
+
+
+                    <a href="/resume"
+                       class="sanitizer-next-button">
+
+                        Build Resume
+
+                        <span>→</span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             HOW IT WORKS
+             ===================================================== -->
+
+        <section class="sanitizer-info-section">
+
+            <div class="sanitizer-container">
+
+                <div class="sanitizer-info-heading">
+
+                    <span class="sanitizer-section-label">
+                        THE WORKFLOW
                     </span>
 
-                    <h2 class="mt-2 text-2xl font-bold">
-                        Resume-Ready Impact Statements
+                    <h2>
+                        A calmer way to look at your code.
                     </h2>
 
-                    <p class="mt-2 text-sm text-gray-500">
-                        These should describe only capabilities and work
-                        that are genuinely supported by the submitted code.
+                    <p>
+                        Instead of throwing a wall of technical output at you,
+                        the workspace separates the review into useful pieces.
                     </p>
 
+                </div>
 
-                    <div id="resumeStatements"
-                         class="mt-6 grid md:grid-cols-3 gap-4">
+
+                <div class="sanitizer-process-grid">
+
+                    <div class="sanitizer-process-item">
+
+                        <span>01</span>
+
+                        <h3>
+                            Paste
+                        </h3>
+
+                        <p>
+                            Add a meaningful piece of Java or Spring Boot
+                            implementation.
+                        </p>
+
+                    </div>
+
+
+                    <div class="sanitizer-process-item">
+
+                        <span>02</span>
+
+                        <h3>
+                            Review
+                        </h3>
+
+                        <p>
+                            Examine practical security and performance
+                            considerations.
+                        </p>
+
+                    </div>
+
+
+                    <div class="sanitizer-process-item">
+
+                        <span>03</span>
+
+                        <h3>
+                            Understand
+                        </h3>
+
+                        <p>
+                            See why something may deserve attention instead
+                            of receiving a vague warning.
+                        </p>
+
+                    </div>
+
+
+                    <div class="sanitizer-process-item">
+
+                        <span>04</span>
+
+                        <h3>
+                            Communicate
+                        </h3>
+
+                        <p>
+                            Capture genuine technical implementation details
+                            for your resume.
+                        </p>
+
                     </div>
 
                 </div>
 
             </div>
 
+        </section>
 
-            <div class="mt-6 border border-[#dfddd6] rounded-lg p-5 bg-[#fbfaf7]">
 
-                <p class="text-sm text-gray-500 leading-6">
 
-                    AI-generated technical suggestions should be reviewed
-                    by the developer before being applied to production code.
-                    Code2Job's resume statements should remain grounded in
-                    the submitted implementation.
+        <!-- =====================================================
+             FAQ
+             ===================================================== -->
 
-                </p>
+        <section class="sanitizer-faq-section">
+
+            <div class="sanitizer-container sanitizer-faq-container">
+
+                <div class="sanitizer-info-heading">
+
+                    <span class="sanitizer-section-label">
+                        QUESTIONS
+                    </span>
+
+                    <h2>
+                        Before you paste your code.
+                    </h2>
+
+                </div>
+
+
+                <div class="sanitizer-faq-list">
+
+                    <details>
+
+                        <summary>
+                            What kind of Java code can I review?
+                            <span>+</span>
+                        </summary>
+
+                        <p>
+                            Controllers, services, repositories, entities,
+                            API implementations and other meaningful backend
+                            code are good starting points.
+                        </p>
+
+                    </details>
+
+
+                    <details>
+
+                        <summary>
+                            Can I review Spring Boot code?
+                            <span>+</span>
+                        </summary>
+
+                        <p>
+                            Yes. The current review experience is focused
+                            particularly on Java and Spring Boot development.
+                        </p>
+
+                    </details>
+
+
+                    <details>
+
+                        <summary>
+                            Does the tool guarantee a security vulnerability?
+                            <span>+</span>
+                        </summary>
+
+                        <p>
+                            No. Findings are review suggestions based on the
+                            submitted implementation. Important findings should
+                            be validated against the complete application.
+                        </p>
+
+                    </details>
+
+
+                    <details>
+
+                        <summary>
+                            Can the resume statements invent achievements?
+                            <span>+</span>
+                        </summary>
+
+                        <p>
+                            They should not. The sanitizer is instructed to
+                            keep resume statements grounded in the technical
+                            evidence present in the submitted code.
+                        </p>
+
+                    </details>
+
+
+                    <details>
+
+                        <summary>
+                            Will other programming languages be supported?
+                            <span>+</span>
+                        </summary>
+
+                        <p>
+                            The current experience is Java and Spring Boot
+                            focused. The same architecture can later be
+                            extended with language-specific review rules for
+                            Python, JavaScript, TypeScript, C#, Go and others.
+                        </p>
+
+                    </details>
+
+                </div>
 
             </div>
 
@@ -352,20 +1079,42 @@ public class UserController {
 
 
 
-    <!-- Footer -->
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
 
     <footer class="c2j-footer">
 
-        <div class="c2j-container py-8 flex justify-between gap-5">
+        <div class="c2j-container sanitizer-footer-inner">
 
-            <p class="text-sm text-gray-500">
-                Code2Job — Java and Spring Boot career tooling.
-            </p>
+            <div>
 
-            <a href="/"
-               class="text-sm font-semibold text-gray-600">
-                Home
-            </a>
+                <p class="sanitizer-footer-brand">
+                    Code2Job
+                </p>
+
+                <p class="sanitizer-footer-text">
+                    Developer tools for code, resumes and career preparation.
+                </p>
+
+            </div>
+
+
+            <div class="sanitizer-footer-links">
+
+                <a href="/">
+                    Home
+                </a>
+
+                <a href="/resume">
+                    Resume Builder
+                </a>
+
+                <a href="/ats">
+                    ATS Analyzer
+                </a>
+
+            </div>
 
         </div>
 
@@ -374,9 +1123,11 @@ public class UserController {
 </div>
 
 
-<script th:src="@{/js/app.js}"></script>
+<!-- Dedicated sanitizer JavaScript -->
+
+<script th:src="@{/js/sanitizer.js}"></script>
+
 
 </body>
 
 </html>
-
